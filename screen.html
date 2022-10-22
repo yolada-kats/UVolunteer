@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>
+            This is my new page.
+        </title>
+        <style>
+            body {
+                background-image: url("images/background.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+            }
+            .container {
+                position: absolute;
+                color:rgb(255, 255, 255);
+                top: 45%;
+                left: 60%;
+                transform: translate(-50%, -50%);
+                width: 60%;
+                height: 45%;
+            }
+            .buttons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-top: 2%;
+            }
+            
+            .b1 {
+                height: 35px;
+                width: 17%;
+                border: none;
+                border-radius: 5px;
+                color: white;
+                font-weight: bold;
+                font-size: 100%;
+                font-family:'Times New Roman', Times, serif;
+                background-color:rgb(77, 77, 77);
+                box-shadow: -1px 1px 0px rgb(59, 59, 59),
+                    -2px 2px 0px rgb(59, 59, 59),
+                    -3px 3px 0px rgb(59, 59, 59),
+                    -4px 4px 0px rgb(59, 59, 59),
+                    -5px 5px 0px rgb(59, 59, 59);
+                cursor: pointer;
+                transition: all .2s ;
+                margin-block-end: auto;
+            }
+
+            .b1:active {
+                box-shadow: -1px 1px 0px rgb(59, 59, 59);
+                background-color: rgb(59, 59, 59);
+                margin-top: 5px;
+            }
+
+            .b2:active {
+                box-shadow: -1px 1px 0px rgb(218, 218, 218);
+                background-color: rgb(162, 162, 162);
+                margin-top: 5px;
+            }
+
+            .b2 {
+                margin-left: 4%;
+                height: 35px;
+                width: 17%;
+                border: none;
+                border-radius: 5px;
+                text-decoration: none;
+                color: rgb(77, 77, 77);
+                font-weight: bold;
+                font-size: 100%;
+                font-family:'Times New Roman', Times, serif;
+                background-color:rgb(215, 215, 215);
+                box-shadow: -1px 1px 0px rgb(162, 162, 162),
+                    -2px 2px 0px rgb(162, 162, 162),
+                    -3px 3px 0px rgb(162, 162, 162),
+                    -4px 4px 0px rgb(162, 162, 162),
+                    -5px 5px 0px rgb(162, 162, 162);
+                cursor: pointer;
+                transition: all .2s;
+                margin-block-end: auto;
+            }
+
+            h1 {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 200;
+                font-size: 300%;
+            }
+            p {
+                font-size: 120%;
+                padding-left: 2%;
+                padding-right: 2%;
+                text-align: justify;
+                text-justify: inter-word;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .social {
+                position: absolute;
+                top: 50%;
+                right: 30px;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .social li {
+                list-style: none;
+            }
+
+            .social li a {
+                display: inline-block;
+                margin: 5px 0;
+                transform: scale(0.6);
+                filter: invert(1);
+            }
+            
+            .vol_images {
+                position: absolute;
+                top: 10%;
+                left: 2%;
+                width: 22%;
+                border-radius: 50px;
+                display: flex;
+                flex-direction: column; 
+                background-color: rgb(58, 58, 58);  
+            }
+            .v_images {
+                height: 25%;  
+                width: 96%;
+                border: 10px;
+                border-radius: 50px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 2%;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>
+                UVolunteer 
+            </h1>
+            <p>
+                Welcome to UVolunteer.
+            </br>
+            </br>
+                ~ We provide the best volunteering programs for university students.
+                Here you can find the most well-fitted volunteering projects for you
+                based on your own needs, skills and other criteria. Find the best 
+                programs suitable for you and connect their teams. Don't miss out, take action
+                and sing in now.
+            </br>
+            </br>
+                ~ On the other hand, if you are part of a nonprofit organization or a
+                project searching for student volunteers and want to connect with students around the world, 
+                this is the place for you. Upload your team's goals and ambitions and increase 
+                your site's publicity and engagement amongst young adults ready to make a change. 
+                Become a member now!
+            </p>
+            <div class="buttons">
+                <button class="b1">
+                    Log in
+                </button>
+                <button class="b2">
+                    Sign in
+                </button>
+            </div>
+        </div>
+        <ul class="social" >    
+            <li><a href="#"><img src="images/facebook .png"></a></li>
+            <li><a href="#"><img src="images/instagram.png"></a></li>
+            <li><a href="#"><img src="images/twitter.png"></a></li>
+        </ul>
+        <div class="vol_images">
+            <img class="v_images 1" src="images/505_childcare2.jpg">
+            <img class="v_images" src="images/tanzania-volunteer-prep.jpg">
+            <img class="v_images" src="images/volunteering.jpg">
+        </div>   
+    </body>
+</html>
