@@ -1,0 +1,42 @@
+body {
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.search-bar{
+    width: 100%;
+    max-width: 700px;
+    background: rgba(255, 238, 214, 0.596);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+    padding: 5px 10px;
+    margin: auto;
+}
+.search-bar input{
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 24px 20px;
+    font-size: 20px;
+    color: whitesmoke;
+}
+::placeholder{
+    color: white;
+}
+.search-bar button img{
+    width: 25px;
+}
+.search-bar button{
+    border: 0;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    background: rgb(145, 95, 3);;
+    cursor: pointer;
+}
