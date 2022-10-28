@@ -10,7 +10,7 @@ body{
     transform: translate(-50%, -50%);
     width:400px;
     border-radius: 10px;
-    background-color: aliceblue;
+    background-color: rgb(240, 248, 255);
 }
 .container h1{
     text-align: center;

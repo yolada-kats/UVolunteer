@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration</title>
+    <title>Submition</title>
     <link rel="stylesheet" href="stylere.css">
  
 </head>
 <body>
     <div class="container">
         <form id="contact" action="" method="post">
-            <h1>Registration Form</h1>
+            <h1>Submition Form</h1>
             <h3>Fill the form below and press the submit button</h3>
             <div class="row">
                 <!-- first column -->
@@ -28,8 +28,12 @@
                         <input type="text" placeholder="Events Date *" name="date" onfocus="(this.type = 'date')" required autofocus>
                     </fieldset>
                     <fieldset>
-                        <input type="file" placeholder="url" name="url" required>
+                        <input type="url" placeholder="url http:// *" name="url" required autofocus>
                     </fieldset>
+                    <fieldset>
+                        <input type="image" placeholder="logo of the company" name="image">
+                    </fieldset>
+
                     <!-- adding all country code list -->
                    
                 </div>
