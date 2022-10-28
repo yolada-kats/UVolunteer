@@ -3,99 +3,156 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
-        <title>
-            This is my new page.
-        </title>
         <style>
+            *{
+                padding: 0;
+                margin: 0;  
+            }
             body {
+                position: absolute;
                 background-image: url("images/background.png");
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 background-position: center;
                 background-size: cover;
             }
-            .container {
+            
+            .menu {
                 position: absolute;
-                color:rgb(255, 255, 255);
-                top: 45%;
-                left: 60%;
-                transform: translate(-50%, -50%);
-                width: 60%;
-                height: 45%;
-            }
-            .buttons {
                 display: flex;
+                flex-direction: column;
+                top: 115px;
+                left: 15px;
+            }
+
+            .menu li {
+                list-style-type: none;
+                height: 50px;
+                margin-top: 50px;                 
+            }
+
+            .menu button{
+                height: 100%;
+                width: 100%;
+                display: inline-flex;
                 align-items: center;
-                justify-content: center;
-                padding-top: 2%;
+                background-color: rgb(79, 47, 11);
+                color:rgb(255, 255, 255);
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 110%;
+                font-weight: 500;
+                overflow: hidden;
+                cursor: pointer;
             }
             
-            .b1 {
-                height: 35px;
-                width: 17%;
-                border: none;
-                border-radius: 5px;
-                color: white;
-                font-weight: bold;
-                font-size: 100%;
-                font-family:'Times New Roman', Times, serif;
-                background-color:rgb(77, 77, 77);
-                box-shadow: -1px 1px 0px rgb(59, 59, 59),
-                    -2px 2px 0px rgb(59, 59, 59),
-                    -3px 3px 0px rgb(59, 59, 59),
-                    -4px 4px 0px rgb(59, 59, 59),
-                    -5px 5px 0px rgb(59, 59, 59);
-                cursor: pointer;
-                transition: all .2s ;
-                margin-block-end: auto;
-            }
-
-            .b1:active {
-                box-shadow: -1px 1px 0px rgb(59, 59, 59);
-                background-color: rgb(59, 59, 59);
-                margin-top: 5px;
-            }
-
-            .b2:active {
-                box-shadow: -1px 1px 0px rgb(218, 218, 218);
-                background-color: rgb(162, 162, 162);
-                margin-top: 5px;
-            }
-
-            .b2 {
-                margin-left: 4%;
-                height: 35px;
-                width: 17%;
-                border: none;
-                border-radius: 5px;
-                text-decoration: none;
-                color: rgb(77, 77, 77);
-                font-weight: bold;
-                font-size: 100%;
-                font-family:'Times New Roman', Times, serif;
-                background-color:rgb(215, 215, 215);
-                box-shadow: -1px 1px 0px rgb(162, 162, 162),
-                    -2px 2px 0px rgb(162, 162, 162),
-                    -3px 3px 0px rgb(162, 162, 162),
-                    -4px 4px 0px rgb(162, 162, 162),
-                    -5px 5px 0px rgb(162, 162, 162);
-                cursor: pointer;
-                transition: all .2s;
-                margin-block-end: auto;
-            }
-
-            h1 {
-                position: relative;
+            .menu button .button_text{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                font-weight: 200;
-                font-size: 300%;
+                background-color: rgb(255, 255, 255);
+                color: rgb(39, 23, 6);
+                height: 100%;
+                width: 200px;
             }
-            p {
-                font-size: 120%;
-                padding-left: 2%;
-                padding-right: 2%;
+            .menu button .button_icon{
+                display: flex;
+                align-items: center;
+                height: fit-content;
+                font-size: 25px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            
+            .menu .button .button_text:active{
+                background-color: rgb(55, 33, 9);
+                color: white;
+            }
+            .menu .button:hover{
+                background-color: rgb(55, 33, 9);
+            }
+            
+            .bar {
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                background-color: rgb(79, 47, 11);
+                display: flex;       
+                width: 100%;
+                height: 80px;
+            }
+
+            .bar h1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                color: white;
+                padding-left: 10px; 
+                font-size: 40px;
+                font-weight: 500;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .bar .buttons {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                right: 10px;
+            }
+
+            .bar .buttons .b1, .b2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(39, 23, 6);
+                border: none;
+                box-shadow: -4px 4px 0 0 black;
+                border-radius: 5px;
+                margin-left: 10px;
+                width: 200px;
+                height: 40px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            .bar .buttons .b2 {
+                background-color: rgb(39, 23, 6);
+                color: white;
+            }
+
+            .bar .buttons .b1:active,
+            .bar .buttons .b2:active {
+                color: white;
+                margin-top: 5px;
+                margin-right: 5px;
+                box-shadow: -1px 1px 0 0 black;                
+            }
+
+            .bar .buttons .b1:hover,
+            .bar .buttons .b2:hover {
+                background-color: rgb(57, 34, 9);
+                color: white;
+            }
+
+            .container {
+                position: fixed;
+                color: white;
+                top: 200px;
+                left: 150px;
+            }
+
+            .container p {
+                font-size: 18px;
+                top: 80px;
+                margin-left: 300px;
+                width: 700px;
+                padding-top: 30px;
                 text-align: justify;
                 text-justify: inter-word;
                 display: flex;
@@ -103,10 +160,16 @@
                 justify-content: center;
             }
 
+            .container h1 {
+                position: fixed;
+                display: flex;
+                margin-left: 300px;
+            }
+
             .social {
-                position: absolute;
-                top: 50%;
-                right: 30px;
+                position: fixed;
+                top: 350px;
+                right: 10px;
                 transform: translateY(-50%);
                 display: flex;
                 justify-content: center;
@@ -125,56 +188,41 @@
                 filter: invert(1);
             }
             
-            .vol_images {
-                position: absolute;
-                top: 10%;
-                left: 2%;
-                width: 22%;
-                border-radius: 50px;
-                display: flex;
-                flex-direction: column; 
-                background-color: rgb(58, 58, 58);  
-            }
-            .v_images {
-                height: 25%;  
-                width: 96%;
-                border: 10px;
-                border-radius: 50px;
-                padding-top: 5px;
-                padding-bottom: 5px;
-                padding-left: 2%;
-            }
-            
-            .bar {
-                position: center;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin-top: 1%;
-            }
-
-            .b {
-                margin-left: 5%;
-                color: white;
-                background-color: transparent;
-                font-size: 15px;
-                border: none;
-            }
         </style>
     </head>
     <body>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <ul class="menu">
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></li>
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="search-outline"></span><span class="button_text">Search</span></button></li>
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favorites</span></button></li>
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></li>
+        </ul>
+
+        <div type="div" class="bar">
+            <h1> UVolunteer </h1>
+            <div class="buttons">
+               <button class="b1">
+                    Log in
+                </button>
+                <button class="b2">
+                    Sing in
+                </button> 
+            </div>
+        </div>
+
         <div class="container">
             <h1>
-                UVolunteer 
+                Welcome to UVolunteer.
             </h1>
             <p>
-                Welcome to UVolunteer.
             </br>
             </br>
                 ~ We provide the best volunteering programs for university students.
                 Here you can find the most well-fitted volunteering projects for you
                 based on your own needs, skills and other criteria. Find the best 
-                programs suitable for you and connect their teams. Don't miss out, take action
+                programs suitable for you and contact their teams. Don't miss out, take action
                 and sing in now.
             </br>
             </br>
@@ -184,35 +232,12 @@
                 your site's publicity and engagement amongst young adults ready to make a change. 
                 Become a member now!
             </p>
-            <div class="buttons">
-                <button class="b1">
-                    Log in
-                </button>
-                <button class="b2">
-                    Sign in
-                </button>
-            </div>
         </div>
-        <div class="bar">
-            <button class="b">
-                Home
-            </button>
-            <button class="b">
-                Reaserch
-            </button>
-            <button class="b">
-                Favorites
-            </button>
-        </div>
+
         <ul class="social" >    
             <li><a href="#"><img src="images/facebook .png"></a></li>
             <li><a href="#"><img src="images/instagram.png"></a></li>
             <li><a href="#"><img src="images/twitter.png"></a></li>
         </ul>
-        <div class="vol_images">
-            <img class="v_images 1" src="images/505_childcare2.jpg">
-            <img class="v_images" src="images/tanzania-volunteer-prep.jpg">
-            <img class="v_images" src="images/volunteering.jpg">
-        </div>   
     </body>
 </html>
