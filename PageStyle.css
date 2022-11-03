@@ -4,6 +4,13 @@ body {
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    column-gap: 10%;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .search-bar{
@@ -37,6 +44,108 @@ body {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    background: rgb(145, 95, 3);;
+    background: rgb(145, 95, 3);
     cursor: pointer;
+}
+.flex-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 3%;
+    
+}
+.flex-box{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    background:rgba(241, 212, 170, 0.89);
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 20px;
+    margin-top: 50px;
+    
+}
+
+
+.title-and-icon{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: medium;
+    margin-top: 10%;
+    margin-left: 5%;
+    line-height: 4;
+    height: 50%;
+}
+.inside-box-icon {
+    border-radius: 4px;
+    height: 40%;
+  }
+
+  .big-flex-box{
+    display: flex;
+    flex-direction: column;
+  }
+
+  button.application {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+    justify-content: center;
+    align-items: center;
+    border-color: rgb(104, 79, 11);
+    color: rgb(104, 79, 11);
+    width: 40%;
+    height: 40%;
+  }
+
+  button.application:active {
+    cursor: pointer;
+  }
+
+  button.application:hover {
+    cursor: pointer;
+  }
+
+  .like-icon{
+    background-color: transparent;
+    height: 50%;
+  }
+
+  button.info {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5%;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border-radius: 10%;
+    color: white;
+    width: 40%;
+    height: 40%;
+  }
+
+
+  .location-icon{
+    background-color: transparent;
+    height: 90%;
+    width: 20%;
+  }
+
+  .info-icons{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 5%;
+    line-height: 4;
+    height: 20%;
 }
