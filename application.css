@@ -1,6 +1,6 @@
 
 body {
-    background-image: url('background.png');
+    background-image: url('images/background.png');
     background-size: cover;
     background-repeat: no-repeat;
   
@@ -11,6 +11,7 @@ body {
  width: 1000%;
  margin: 0 auto;
 }
+
 #contact {
  background-color: rgba(255, 238, 214, 0.596);
  padding: 20px;
