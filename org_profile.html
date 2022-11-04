@@ -167,8 +167,8 @@
             }
             
             .name {
-                color:black;
-                width:fit-content;
+                color: black;
+                width: fit-content;
                 background-color: transparent;
                 border: none;
                 font-family: 'Times New Roman', Times, serif;
@@ -178,8 +178,8 @@
                 padding-bottom: 5px;
             }
 
-            .search-bar{
-                position: fixed;
+            .search-bar {
+                position: absolute;
                 width: 100%;
                 width: 680px;
                 height: 55px;
@@ -220,16 +220,7 @@
         </style>
     </head>
     <body>
-        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <ul class="menu">
-        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></li>
-        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="person-outline"></ion-icon></span><span class="button_text">Profil</span></button></li>
-        <li><a href ="SearchPage.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="search-outline"></span><span class="button_text">Search</span></button></a></li>
-        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favorites</span></button></li>
-        <li><a href ="Application.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
-        </ul>
-
+        
         <div type="div" class="bar">
             <h1> UVolunteer </h1>
             <div class="buttons">
@@ -245,6 +236,17 @@
                 </a>
             </div>
         </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <ul class="menu">
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></li>
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="person-outline"></ion-icon></span><span class="button_text">Profil</span></button></li>
+        <li><a href ="SearchPage.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="search-outline"></span><span class="button_text">Search</span></button></a></li>
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favorites</span></button></li>
+        <li><a href ="Application.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
+        </ul>
+
 
         <div class="search-bar">
             <input type="text" name="q" placeholder="Search for students...">
@@ -263,6 +265,7 @@
             </il>
             <il><div><img src="images/member1.png"><div class="personal_info"><a href ="profile.html" style="text-decoration: none"><button class="name">Name Surname</button></a><text class="city"><ion-icon name="location-outline"></ion-icon>Athens</text></div></div></il>
             <il><div><img src="images/member1.png"><div class="personal_info"><a href ="profile.html" style="text-decoration: none"><button class="name">Name Surname</button></a><ion-icon name="location-outline"></ion-icon>Rome</text></div></div></il>
+            <il><div><img src="images/member1.png"><div class="personal_info"><a href ="profile.html" style="text-decoration: none"><button class="name">Name Surname</button></a><ion-icon name="location-outline"></ion-icon>Paris</text></div></div></il>
         </ul>
     </body>
 </html>
