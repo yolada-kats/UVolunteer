@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <style>
+            *{
+                padding: 0;
+                margin: 0;  
+            }
+            body {
+                position: absolute;
+                background-image: url("images/background.png");
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: center;
+                background-size: cover;
+            }
+            
+            .menu {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                top: 115px;
+                left: 15px;
+            }
+
+            .menu li {
+                list-style-type: none;
+                height: 50px;
+                margin-top: 50px;                 
+            }
+
+            .menu button{
+                height: 100%;
+                width: 100%;
+                display: inline-flex;
+                align-items: center;
+                background-color: rgb(79, 47, 11);
+                color:rgb(255, 255, 255);
+                border: none;
+                border-radius: 5px;
+                outline: none;
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 110%;
+                font-weight: 500;
+                overflow: hidden;
+                cursor: pointer;
+            }
+            
+            .menu button .button_text{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(255, 255, 255);
+                color: rgb(39, 23, 6);
+                height: 100%;
+                width: 200px;
+            }
+            .menu button .button_icon{
+                display: flex;
+                align-items: center;
+                height: fit-content;
+                font-size: 25px;
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            
+            .menu .button .button_text:active{
+                background-color: rgb(55, 33, 9);
+                color: white;
+            }
+            .menu .button:hover{
+                background-color: rgb(55, 33, 9);
+            }
+            
+            .bar {
+                margin: 0;
+                padding: 0;
+                position: fixed;
+                background-color: rgb(79, 47, 11);
+                display: flex;       
+                width: 100%;
+                height: 90px;
+            }
+
+            .bar h1 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                color: white;
+                padding-left: 10px; 
+                font-size: 40px;
+                font-weight: 500;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+            }
+
+            .bar .buttons {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                right: 10px;
+            }
+
+            .bar .buttons .b1, .b2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: rgb(39, 23, 6);
+                border: none;
+                border-radius: 5px;
+                margin-left: 10px;
+                width: 200px;
+                height: 40px;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 20px;
+                font-weight: 500;
+                cursor: pointer;
+            }
+
+            .bar .buttons .b2 {
+                background-color: rgb(39, 23, 6);
+                color: white;
+            }
+
+            .bar .buttons .b1:active,
+            .bar .buttons .b2:active {
+                color: white;
+                           
+            }
+
+            .bar .buttons .b1:hover,
+            .bar .buttons .b2:hover {
+                background-color: rgb(57, 34, 9);
+                color: white;
+            }
+            .social {
+                position: fixed;
+                top: 350px;
+                right: 10px;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .social li {
+                list-style: none;
+            }
+
+            .social li a {
+                display: inline-block;
+                margin: 5px 0;
+                transform: scale(0.6);
+                filter: invert(1);
+            }
+            .big-flex-box{
+                margin-top: 20%;
+                margin-left: 55%;
+                width:fit-content;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .flex-container{
+                align-self:center;
+                width: 110%;
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                column-gap: 3%;
+            }
+            .flex-box{
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                width: 400px;
+                height: 300px;
+                background:rgba(241, 212, 170, 0.89);
+                color: black;
+                font-size: 25px;
+                text-align: center;
+                line-height: 200px;
+                border-radius: 2px;
+                margin-top: 10px;
+                margin-bottom: 20px;
+            }
+  
+            .title-and-icon{
+                display: flex;
+                flex-direction: row;
+                column-gap: 10%;
+                align-items: flex-start;
+                justify-content: flex-start;
+                font-size: medium;
+                margin-top: 10%;
+                margin-left: 5%;
+                line-height: 4;
+                height: 50%;
+            }
+            .inside-box-icon {
+                border-radius: 2px;
+                height: 40%;
+                width: 25%;
+            }
+            b{
+                font-size: large;
+            }
+            button.application {
+                display: flex;
+                flex-direction: row;
+                column-gap: 5%;
+                justify-content: center;
+                align-items: center;
+                border-color: rgb(87, 42, 9);
+                width: 50%;
+                height: 50%;
+                border-radius: 5px;
+            }
+            button.favorite{
+                display: flex;
+                flex-direction: row;
+                column-gap: 5%;
+                align-self:auto;
+                margin-left: 5%;
+                justify-content:center;
+                align-items:center;
+                border-color: rgb(87, 42, 9);
+                width: 30%;
+                height: 50%;
+                border-radius: 5px; 
+            }
+  
+            button.application:active {
+                cursor: pointer;
+            }
+            button.favorite:active {
+                cursor: pointer;
+            }
+  
+            button.application:hover {
+                cursor: pointer;
+                color: rgb(120, 78, 22);
+            }
+            button.favorite:hover {
+                cursor: pointer;
+                color: rgb(174, 114, 36);
+            }
+  
+            .like-icon{
+                background-color: transparent;
+                height: 80%;
+            }
+  
+            button.info {
+                display: flex;
+                flex-direction: row;
+                column-gap: -2%;
+                justify-content: center;
+                align-items: center;
+                text-align: start;
+                background-color: transparent;
+                border-radius: 10%;
+                border: none;
+                color: rgb(0, 0, 0);
+                width: 40%;
+                height: 40%;
+            }
+            
+            .location-icon{
+                height: 30px;
+                width: 30px;
+            }
+  
+            .info-icons{
+                display: flex;
+                flex-direction: row;
+                column-gap: 10%;
+                align-items: flex-start;
+                justify-content: flex-start;
+                margin-left: 5%;
+                line-height: 4;
+                height: 20%;
+            }
+        </style>
+    </head>
+    <body>
+        <div type="div" class="bar">
+            <h1> UVolunteer </h1>
+            <div class="buttons">
+               <a href ="Login.html" style="text-decoration: none">
+               <button class="b1">
+                    Log in
+                </button>
+                </a>
+                <a href ="Signin.html" style="text-decoration: none">
+                <button class="b2">
+                    Sing in
+                </button> 
+                </a>
+            </div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <ul class="menu">
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></li>
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="person-outline"></ion-icon></span><span class="button_text">Profil</span></button></li>
+        <li><a href ="SearchPage.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="search-outline"></span><span class="button_text">Search</span></button></a></li>
+        <li class="active"><a href ="Favorites.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favorites</span></button></a></li>
+        <li><a href ="Application.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
+        </ul>
+            <div class="big-flex-box">
+                <div class="flex-container">
+                    <div class="flex-box">
+                        <div class="title-and-icon">
+                            <img class="inside-box-icon" src="images/TEDx.jpg" alt="Company Image">
+                            <b>TEDx PROGRAM</b> 
+                        </div>
+                        <div class="info-icons">
+                            <button class="info" type="button" disabled> <img class="location-icon" src="images/locationpic.png" alt="Like Image">Athens</button>
+                            <button class="info" type="button" disabled> <img class="location-icon" src="images/datecalendarpic.png" alt="Like Image">28/3/25</button>
+                        </div>
+                        <div class="info-icons">
+                            <button class="application" type="submit">Click here to apply</button>
+                            <button class="favorite" type="submit"> <img class="like-icon" src="images/black-heart-favorites.png" alt="Like Image">Favourites</button>
+                        </div>
+                    </div>
+                    <div class="flex-box">
+                        <div class="title-and-icon">
+                            <img class="inside-box-icon" src="images/Unicef.jpg" alt="Company Image">
+                            <b>UNICEF</b>
+                        </div>
+                        <div class="info-icons">
+                            <button class="info" type="button" disabled> <img class="location-icon" src="images/locationpic.png" alt="Like Image">Athens</button>
+                            <button class="info" type="button" disabled> <img class="location-icon" src="images/datecalendarpic.png" alt="Like Image">28/3/25</button>
+                        </div>
+                        <div class="info-icons">
+                            <button class="application" type="submit">Click here to apply</button>
+                            <button class="favorite" type="submit"> <img class="like-icon" src="images/black-heart-favorites.png" alt="Like Image">Favourites</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-container">
+                    <div class="flex-box">
+                        <div class="title-and-icon">
+                            <img class="inside-box-icon" src="images/ΦΣ-ΔΕΤ.jpg" alt="Company Image">
+                            <b>ΦΣ-ΔΕΤ</b>
+                        </div>
+                    <div class="info-icons">
+                        <button class="info" type="button" disabled> <img class="location-icon" src="images/locationpic.png" alt="Like Image">Athens</button>
+                        <button class="info" type="button" disabled> <img class="location-icon" src="images/datecalendarpic.png" alt="Like Image">28/3/25</button>
+                    </div>
+                    <div class="info-icons">
+                        <button class="application" type="submit">Click here to apply</button>
+                        <button class="favorite" type="submit"> <img class="like-icon" src="images/black-heart-favorites.png" alt="Like Image">Favourites</button>
+                    </div>
+                </div>
+            </div>    
+        <ul class="social" >    
+            <li><a href="#"><img src="images/facebook .png"></a></li>
+            <li><a href="#"><img src="images/instagram.png"></a></li>
+            <li><a href="#"><img src="images/twitter.png"></a></li>
+        </ul>
+    </body>
+</html>
