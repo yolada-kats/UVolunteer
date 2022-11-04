@@ -152,98 +152,91 @@
             }
            
             .container {
-                position:fixed;
-                display:flex;
-                justify-content: center;
+                position: absolute;
+                display: flex;
                 align-items: center;
-                background-color: rgba(250, 235, 215, 0.541);
-                top:150px;
-                left:400px;
-                height:fit-content;
-                width:900px;
-
-
-                
-               
+                justify-content: center;
+                background-color:rgba(241, 212, 170);
+                top: 150px;
+                left: 400px;
+                height: fit-content;
+                width: 900px;               
+                border-radius: 5px;
             }
-#contact {
- background-color: rgba(255, 238, 214, 0);
- padding: 30px;
- margin: 100px 0;
- 
-}
-#contact input, button {
- font: 400 15px 'Open Sans', sans-serif, helvetica, Times ;
-}
-#contact h1 {
- font-size: 50px;
- top:100px;
- font-weight: bold;
- text-align: center;
- color: rgb(100, 80, 12);
-}
-#contact h3 {
- margin: 50px 0px 15px;
- text-align: center;
-}
-.row {
- display: flex;
- width: 100%;
- padding: 20px 0px;
-}
-.row .column {
- margin: 0px 30px;
- width: 50%;
-}
-fieldset {
- border: medium none !important;
- margin:  0 0 10px;
- min-width: 100%;
- width: 100%;
-}
-#contact input {
- width: 100%;
- border: 1px solid rgb(231, 218, 158);
- background-color: white;
- padding: 10px;
- margin: 5px 0;
-}
-input[type = "radio"] {
- width: 10% !important;
-}
-#contact .row .radio {
- border: 1px solid rgb(255, 187, 110);
- background-color: white;
- margin: 7px 0 10px;
- padding: 5px;
-}
-
-#contact button {
- outline: none;
- border-radius: 5px;
- background-color: rgb(145, 95, 3);
- color: white;
- margin: 0 0 5px 40%;
- padding: 10px;
- font-size: 17px;
- width: 150px;
-}
- 
-#contact button:hover {
- background-color: rgba(82, 40, 27, 0.8);
-}
- 
-
-
-          
-
-           
-
-
-          
-                
             
-    
+            #contact h1{
+                margin-top: 30px;
+            }
+
+            #contact input, button {
+                font: 400 15px 'Open Sans', sans-serif, helvetica, Times ;
+            }
+
+            #contact h1 {
+                font-size: 40px;
+                padding-top: 0px;
+                font-weight: bold;
+                text-align: center;
+                color: rgb(100, 80, 12);
+            }
+
+            #contact h3 {
+                margin: 50px 0px 15px;
+                text-align: center;
+            }
+
+            .row {
+                display: flex;
+                width: 100%;
+                padding: 20px 0px;
+            }
+
+            .row .column {
+                margin: 0px 30px;
+                width: 50%;
+            }
+
+            fieldset {
+                border: medium none !important;
+                margin:  0 0 10px;
+                width: 500px;
+            }
+
+            #contact input {
+                width: 100%;
+                border: 1px solid rgb(231, 218, 158);
+                background-color: white;
+                padding: 10px;
+                margin: 5px 0;
+            }
+
+            input[type = "radio"] {
+                width: 10% !important;
+            }
+
+            #contact .row .radio {
+                border: 1px solid rgb(255, 187, 110);
+                background-color: white;
+                margin: 7px 0 10px;
+                padding: 5px;
+            }
+
+            #contact button {
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                background-color: rgb(39, 23, 6);
+                color: white;
+                margin: 0 0 5px 40%;
+                padding: 10px;
+                font-size: 17px;
+                width: 200px;
+                cursor: pointer;
+            }
+            
+            #contact button:hover {
+                background-color: rgb(57, 34, 9);
+            }
 
         </style>
     
@@ -258,24 +251,7 @@ input[type = "radio"] {
             <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favorites</span></button></li>
            
             </ul>
-    
-    
-            <div type="div" class="bar">
-                <h1> UVolunteer </h1>
-                <div class="buttons">
-                   <a href ="Login.html" style="text-decoration: none">
-                   <button class="b1">
-                        Log in
-                    </button>
-                    </a>
-                    <a href ="Signin.html" style="text-decoration: none">
-                    <button class="b2">
-                        Sing in
-                    </button> 
-                    </a>
-                </div>
-            </div>
-           
+
             <div class="container">
                 <form id="contact" action="" method="post">
                     <h1>Submition Form</h1>
@@ -283,23 +259,19 @@ input[type = "radio"] {
                         <!-- first column -->
                         <div class="column">                        
                             <fieldset>
-                                <input type="text" placeholder="Name of the organization *" name="name" required autofocus>
+                                <input type="text" placeholder="Name *" name="name" required autofocus>
                             </fieldset>
                             <fieldset>
-                                <input type="text" placeholder="Organizations place *" name="fname" required autofocus>
+                                <input type="text" placeholder="Surname *" name="fname" required autofocus>
+                            </fieldset>
+                            <fieldset>
+                                <input type="text" placeholder="Birthday *" name="date" onfocus="(this.type = 'date')" required autofocus>
                             </fieldset>
                             <fieldset>
                                 <input type="email" placeholder="Contact email *" name="email" required autofocus>
                             </fieldset>
-                            <fieldset>
-                                <input type="text" placeholder="Events Date *" name="date" onfocus="(this.type = 'date')" required autofocus>
-                            </fieldset>
-                            <fieldset>
-                                <input type="url" placeholder="url http:// *" name="url" required autofocus>
-                            </fieldset>
-                            <fieldset>
-                                <i class="fa fa-user icon"></i>
-                                <input type="image"  placeholder="logo of the company" name="image"> 
+                            <fieldset class="comments">
+                                <input type="p" placeholder="Comments about you *" name="comments" required autofocus>
                             </fieldset>
         
                             <!-- adding all country code list -->
@@ -316,6 +288,20 @@ input[type = "radio"] {
                 </form>
             </div>
 
-           
+            <div type="div" class="bar">
+                <h1> UVolunteer </h1>
+                <div class="buttons">
+                   <a href ="Login.html" style="text-decoration: none">
+                   <button class="b1">
+                        Log in
+                    </button>
+                    </a>
+                    <a href ="Signin.html" style="text-decoration: none">
+                    <button class="b2">
+                        Sing in
+                    </button> 
+                    </a>
+                </div>
+            </div>
     </body>
 </html>
