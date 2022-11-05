@@ -95,56 +95,25 @@
                 font-weight: 500;
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
+            
+            h1 span{
+                color: rgb(184, 124, 56);
+                font-size: 25px;
+            }
 
-            .bar .buttons {
+            .container {
                 position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                right: 10px;
-            }
-
-            .bar .buttons .b1, .b2 {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: rgb(39, 23, 6);
-                border: none;
-                border-radius: 5px;
-                margin-left: 10px;
-                width: 200px;
-                height: 40px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-size: 20px;
-                font-weight: 500;
-                cursor: pointer;
-            }
-
-            .bar .buttons .b2 {
-                background-color: rgb(39, 23, 6);
-                color: white;
-            }
-
-            .bar .buttons .b1:active,
-            .bar .buttons .b2:active {
-                color: white;
-                           
-            }
-
-            .bar .buttons .b1:hover,
-            .bar .buttons .b2:hover {
-                background-color: rgb(57, 34, 9);
-                color: white;
+                top: 150px;
+                left: 450px;
             }
 
             .profiles {
                 position: absolute;
-                left: 400px;
-                top: 250px;
+                padding-bottom: 100px;
             }
 
             .profiles li {
+                position: absolute;
                 list-style-type: none;
             }
 
@@ -179,12 +148,9 @@
             }
 
             .search-bar {
-                position: absolute;
-                width: 100%;
+                margin-bottom: 20px;
                 width: 680px;
                 height: 55px;
-                top: 150px;
-                left: 400px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -216,27 +182,32 @@
                 background: rgb(145, 95, 3);
                 cursor: pointer;
             }
+
+            .social {
+                position: fixed;
+                top: 350px;
+                right: 10px;
+                transform: translateY(-50%);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .social li {
+                list-style: none;
+            }
+
+            .social li a {
+                display: inline-block;
+                margin: 5px 0;
+                transform: scale(0.6);
+                filter: invert(1);
+            }
             
         </style>
     </head>
     <body>
-        
-        <div type="div" class="bar">
-            <h1> UVolunteer </h1>
-            <div class="buttons">
-               <a href ="Login.html" style="text-decoration: none">
-               <button class="b1">
-                    Log in
-                </button>
-                </a>
-                <a href ="Signin.html" style="text-decoration: none">
-                <button class="b2">
-                    Sing in
-                </button> 
-                </a>
-            </div>
-        </div>
-
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <ul class="menu">
@@ -247,13 +218,12 @@
         <li><a href ="Application.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
         </ul>
 
-
-        <div class="search-bar">
+        <div class="container">
+            <div class="search-bar">
             <input type="text" name="q" placeholder="Search for students...">
             <button type="submit"><img src="images/search.png"></button>
-        </div>
-
-        <ul class="profiles">
+            </div>
+            <ul class="profiles">
             <il>
                 <div>
                     <img src="images/member1.png">
@@ -264,8 +234,21 @@
                 </div>
             </il>
             <il><div><img src="images/member1.png"><div class="personal_info"><a href ="profile.html" style="text-decoration: none"><button class="name">Name Surname</button></a><text class="city"><ion-icon name="location-outline"></ion-icon>Athens</text></div></div></il>
-            <il><div><img src="images/member1.png"><div class="personal_info"><a href ="profile.html" style="text-decoration: none"><button class="name">Name Surname</button></a><ion-icon name="location-outline"></ion-icon>Rome</text></div></div></il>
-            <il><div><img src="images/member1.png"><div class="personal_info"><a href ="profile.html" style="text-decoration: none"><button class="name">Name Surname</button></a><ion-icon name="location-outline"></ion-icon>Paris</text></div></div></il>
+            <il><div><img src="images/member1.png"><div class="personal_info"><a href ="profile.html" style="text-decoration: none"><button class="name">Name Surname</button></a><text class="city"><ion-icon name="location-outline"></ion-icon>Rome</text></div></div></il>
+            <il><div><img src="images/member1.png"><div class="personal_info"><a href ="profile.html" style="text-decoration: none"><button class="name">Name Surname</button></a><text class="city"><ion-icon name="location-outline"></ion-icon>Paris</text></div></div></il>
+            </ul>
+        </div>
+       
+        <ul class="social" >    
+            <li><a href="#"><img src="images/facebook .png"></a></li>
+            <li><a href="#"><img src="images/instagram.png"></a></li>
+            <li><a href="#"><img src="images/twitter.png"></a></li>
         </ul>
+        
+        <div type="div" class="bar">
+            <h1>U<span class="color">ni</span>Volunteer </h1>
+        </div>
+
+
     </body>
 </html>

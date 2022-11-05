@@ -35,6 +35,8 @@ body{
     outline: none;
     background: none;
     border: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
  }
 
  .txt_field label{
@@ -74,16 +76,22 @@ input[type="submit"]{
     width: 100%;
     height: 50px;
     border: 1px solid;
-    background: #092639;
+    background: rgb(39, 23, 6);
     border-radius: 20px;
     font-size: 18px;
     color: aliceblue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
     font-weight: 700;
     outline: none;
 }
 
+input[type="submit"]:hover {
+    background: rgb(74, 44, 12);
+}
+
 .Login{
     margin-top: 25px;
+    margin-bottom: 15px;
     text-align: center;
 }
