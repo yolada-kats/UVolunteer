@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="updateprofile.css">
+    </head>
+    <body>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <ul class="menu">
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></li>
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="person-outline"></ion-icon></span><span class="button_text">Profil</span></button></li>
+        <li><a href ="SearchPage.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="search-outline"></span><span class="button_text">Search</span></button></a></li>
+        <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favorites</span></button></li>
+        <li><a href ="Application.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
+        </ul>
+        <div class="personal_info">
+            <div class="text_info"> 
+            <form action="#" method="POST" class="form">
+                <div class="form-group">
+                    <label for="name" class="label">Name*</label>
+                    <div class="row">
+                        <input type="text" id="name" name="student_name" class="txt_field"  style="font-size:medium; font-family: 'Times New Roman', Times, serif;"required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="surname" class="label">Surname*</label>
+                    <div class="row">
+                        <input type="text" id="surname" name="student_surname" class="txt_field" style="font-size:medium;font-family: 'Times New Roman', Times, serif;" required  autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="birthday" class="label">Birthday</label>
+                    <div class="row">
+                        <input type="date" id="birthday" name="student_birthday" class="date" style="font-size:medium;font-family: 'Times New Roman', Times, serif;" onfocus="(this.type = 'date')" required autofocus>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="city" class="label">City*</label>
+                    <div class="row">
+                        <input type="text" id="city" name="student_city" class="txt_field" style="font-size:medium; font-family: 'Times New Roman', Times, serif;" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="label">Contact* </label>
+                    <div class="row">
+                        <input type="email" id="email" name="student_email" class="email" style="font-size:medium; font-family: 'Times New Roman', Times, serif;" placeholder="xxxx@gmail.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="image" class="label">Upload Image </label>
+                    <div class="row">
+                        <input id="imageUpload" type="file" name="profile_photo" style="font-size:medium; font-family: 'Times New Roman', Times, serif;" placeholder="Photo" required="" capture>
+                    </div>
+                </div>
+               <div >
+                    <label for="phone" class="label">Comments:</label>
+                    <div class="text">        
+                        <textarea class="form-control" rows="4"  maxlength="1000" style="font-size:medium; font-family: 'Times New Roman', Times, serif;" placeholder="Insert any comments here"></textarea>					
+                    </div>
+                </div>
+            </form>  
+        </div> 
+        <div class="row">
+            <a href="StudentProfile.html" style="text-decoration: none; color: white;" ><button class="Save"> Save </button> </a>
+        </div>
+        </div>
+        <div type="div" class="bar">
+            <h1>U<span class="color">ni</span>Volunteer </h1>
+        </div>
+    </body>
+</html>
