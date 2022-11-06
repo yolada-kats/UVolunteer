@@ -96,47 +96,11 @@
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
 
-            .bar .buttons {
-                position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
-                right: 10px;
+            h1 span{
+                color: rgb(184, 124, 56);
+                font-size: 25px;
             }
 
-            .bar .buttons .b1, .b2 {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: rgb(39, 23, 6);
-                border: none;
-                border-radius: 5px;
-                margin-left: 10px;
-                width: 200px;
-                height: 40px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-size: 20px;
-                font-weight: 500;
-                cursor: pointer;
-            }
-
-            .bar .buttons .b2 {
-                background-color: rgb(39, 23, 6);
-                color: white;
-            }
-
-            .bar .buttons .b1:active,
-            .bar .buttons .b2:active {
-                color: white;
-                           
-            }
-
-            .bar .buttons .b1:hover,
-            .bar .buttons .b2:hover {
-                background-color: rgb(57, 34, 9);
-                color: white;
-            }
             .social {
                 position: fixed;
                 top: 350px;
@@ -216,23 +180,30 @@
                 column-gap: 5%;
                 justify-content: center;
                 align-items: center;
-                border-color: rgb(87, 42, 9);
                 width: 50%;
-                height: 50%;
+                height: 60%;
                 border-radius: 5px;
+                border: none;
+                background: rgb(39, 23, 6);
+                color: white;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 60%;
             }
             button.favorite{
                 display: flex;
                 flex-direction: row;
                 column-gap: 5%;
                 align-self:auto;
-                margin-left: 5%;
+                margin-left: 1%;
                 justify-content:center;
                 align-items:center;
-                border-color: rgb(87, 42, 9);
-                width: 30%;
-                height: 50%;
+                width: 35%;
+                height: 60%;
                 border-radius: 5px; 
+                border: none;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                color: rgb(39, 23, 6);
+                font-size: 60%;
             }
   
             button.application:active {
@@ -244,11 +215,12 @@
   
             button.application:hover {
                 cursor: pointer;
-                color: rgb(120, 78, 22);
+                background: rgb(74, 44, 12);
             }
+
             button.favorite:hover {
                 cursor: pointer;
-                color: rgb(174, 114, 36);
+                color: rgb(102, 59, 12);
             }
   
             .like-icon{
@@ -256,54 +228,54 @@
                 height: 80%;
             }
   
-            button.info {
+            .info {
                 display: flex;
                 flex-direction: row;
-                column-gap: -2%;
-                justify-content: center;
+                justify-content: space-around;
                 align-items: center;
-                text-align: start;
                 background-color: transparent;
                 border-radius: 10%;
                 border: none;
                 color: rgb(0, 0, 0);
                 width: 40%;
                 height: 40%;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-size: 60%;
+                margin-left: 30px;
+                padding-right: 40px;
+            }
+
+            .info-icons{
+                display: flex;
+                flex-direction: row;
+                column-gap: 25%;
+                align-items: flex-start;
+                justify-content: flex-start;
+                line-height: 4;
+                height: 15%;
+                font-size: 120%;
+                margin-left: 0;
+                padding-left: 0px;
             }
             
-            .location-icon{
-                height: 30px;
-                width: 30px;
-            }
-  
-            .info-icons{
+            .info-buttons{
                 display: flex;
                 flex-direction: row;
                 column-gap: 10%;
                 align-items: flex-start;
                 justify-content: flex-start;
                 margin-left: 5%;
-                line-height: 4;
                 height: 20%;
             }
+
+            
+
         </style>
     </head>
     <body>
-        <div type="div" class="bar">
-            <h1> UVolunteer </h1>
-            <div class="buttons">
-               <a href ="Login.html" style="text-decoration: none">
-               <button class="b1">
-                    Log in
-                </button>
-                </a>
-                <a href ="Signin.html" style="text-decoration: none">
-                <button class="b2">
-                    Sing in
-                </button> 
-                </a>
-            </div>
-        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <ul class="menu">
@@ -313,6 +285,10 @@
         <li class="active"><a href ="Favorites.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favorites</span></button></a></li>
         <li><a href ="Application.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
         </ul>
+        <div type="div" class="bar">
+            <h1>U<span class="color">ni</span>Volunteer </h1>
+        </div>
+
             <div class="big-flex-box">
                 <div class="flex-container">
                     <div class="flex-box">
@@ -321,12 +297,12 @@
                             <b>TEDx PROGRAM</b> 
                         </div>
                         <div class="info-icons">
-                            <button class="info" type="button" disabled> <img class="location-icon" src="images/locationpic.png" alt="Like Image">Athens</button>
-                            <button class="info" type="button" disabled> <img class="location-icon" src="images/datecalendarpic.png" alt="Like Image">28/3/25</button>
+                            <button class="info" type="button" disabled> <ion-icon name="compass-outline"></ion-icon> Athens</button>
+                            <button class="info" type="button" disabled> <ion-icon name="calendar-outline"></ion-icon> 8/1/24</button>
                         </div>
-                        <div class="info-icons">
-                            <button class="application" type="submit">Click here to apply</button>
-                            <button class="favorite" type="submit"> <img class="like-icon" src="images/black-heart-favorites.png" alt="Like Image">Favourites</button>
+                        <div class="info-buttons">
+                            <button class="application" type="submit">Click here to visit</button>
+                            <button class="favorite" type="submit"> <ion-icon name="heart"></ion-icon>Favourites</button>
                         </div>
                     </div>
                     <div class="flex-box">
@@ -335,12 +311,12 @@
                             <b>UNICEF</b>
                         </div>
                         <div class="info-icons">
-                            <button class="info" type="button" disabled> <img class="location-icon" src="images/locationpic.png" alt="Like Image">Athens</button>
-                            <button class="info" type="button" disabled> <img class="location-icon" src="images/datecalendarpic.png" alt="Like Image">28/3/25</button>
+                            <button class="info" type="button" disabled> <ion-icon name="compass-outline"></ion-icon>Rome</button>
+                            <button class="info" type="button" disabled> <ion-icon name="calendar-outline"></ion-icon>2/9/23</button>
                         </div>
-                        <div class="info-icons">
-                            <button class="application" type="submit">Click here to apply</button>
-                            <button class="favorite" type="submit"> <img class="like-icon" src="images/black-heart-favorites.png" alt="Like Image">Favourites</button>
+                        <div class="info-buttons">
+                            <button class="application" type="submit">Click here to visit</button>
+                            <button class="favorite" type="submit"><ion-icon name="heart"></ion-icon>Favourites</button>
                         </div>
                     </div>
                 </div>
@@ -351,19 +327,21 @@
                             <b>ΦΣ-ΔΕΤ</b>
                         </div>
                     <div class="info-icons">
-                        <button class="info" type="button" disabled> <img class="location-icon" src="images/locationpic.png" alt="Like Image">Athens</button>
-                        <button class="info" type="button" disabled> <img class="location-icon" src="images/datecalendarpic.png" alt="Like Image">28/3/25</button>
+                        <button class="info" type="button" disabled> <ion-icon name="compass-outline"></ion-icon> Athens</button>
+                        <button class="info" type="button" disabled> <ion-icon name="calendar-outline"></ion-icon> 28/3/23</button>
                     </div>
-                    <div class="info-icons">
-                        <button class="application" type="submit">Click here to apply</button>
-                        <button class="favorite" type="submit"> <img class="like-icon" src="images/black-heart-favorites.png" alt="Like Image">Favourites</button>
+                    <div class="info-buttons">
+                        <button class="application" type="submit">Click here to visit</button>
+                        <button class="favorite" type="submit"> <ion-icon name="heart"></ion-icon>Favourites</button>
                     </div>
                 </div>
-            </div>    
+            </div>
+
         <ul class="social" >    
             <li><a href="#"><img src="images/facebook .png"></a></li>
             <li><a href="#"><img src="images/instagram.png"></a></li>
             <li><a href="#"><img src="images/twitter.png"></a></li>
         </ul>
+        
     </body>
 </html>
