@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;  
 }
-
 body {
     position: absolute;
     background-image: url("images/background.png");
@@ -47,10 +46,10 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
-    color: rgb(39, 23, 6);
     height: 100%;
     width: 180px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(39, 23, 6);
 }
 .menu button .button_icon{
     display: flex;
@@ -68,6 +67,18 @@ body {
 .menu .button:hover{
     background-color: rgb(55, 33, 9);
 }
+
+.menu .button:hover ~ .button_text{
+    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 150px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(39, 23, 6);
+}
+
 
 .bar {
     margin: 0;
@@ -91,106 +102,107 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.personal_info {
-    position: absolute;
-    top: 150px;
-    left: 400px;
-    width: 750px;
-    bottom: 20px;
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    background-color:rgba(241, 211, 170, 0.932);
-    border-radius: 5px;
-    overflow: hidden;
+.container {
+    position: fixed;
+    color: white;
+    top: 200px;
+    left: 350px;
 }
 
-.personal_info .text_info {
-    display: flex;
-}
-
-.personal_info .text_info img {
-    height: 200px;
-    margin-bottom: 20px;
-}
-
-.personal_info .text_info text {
-    display: flex;
-    flex-direction: column;
-    padding-top: 15px;
-    padding-left: 10px;
-    font-size: 110%;
-}
-
-.personal_info .comments {
-    padding-top: 15px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-bottom: 400px;
-    font-size: 110%;
-}
-
-.personal_info .comments p {
-    font-size: 95%;
-    margin-top: 15px;
-    margin-bottom: 15px;
+.container p {
+    font-size: 18px;
+    top: 80px;
+    width: 800px;
+    padding-top: 30px;
     text-align: justify;
     text-justify: inter-word;
-}
-
-.Save {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 240px;
+}
+
+.container h1 {
+    position: fixed;
+    display: flex;                
+}
+
+h1 span{
+    color: rgb(184, 124, 56);
+    font-size: 25px;
+}
+
+.social {
+    position: fixed;
+    top: 350px;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+.text-color{
+    color:rgb(79, 47, 11);
+    text-align: center;
+    text-shadow: 2px 2px 4px rgb(176, 160, 131);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+.btn-light{
+    color:rgb(243, 241, 239);
+    background-color:rgb(74, 44, 12);;
+    border-color: antiquewhite;
     width: 250px;
     height: 45px;
     margin-top: 20px;
     margin-bottom: 10px;
-    background: rgb(39, 23, 6);
-    color: white;
-    border: none;
-    border-radius: 15px;
-    font-size: 120%;
-    font-weight: 500;
     font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
-}
+    border-radius: 10px;
+    margin-left: 140px;
+    
 
-.Save:hover {
-    background-color: rgb(74, 44, 12);
+}
+.btn-light:hover{
+    background-color: rgb(114, 66, 15);
     color: white;
 }
-.form{
-    margin-left: 15px;
-    margin-top: 10px;
+.container{
+    position:absolute;
+    background-color:rgba(255, 238, 214, 0.596);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    margin-top: -40px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    
 }
+
 .form-group{
-margin-bottom: 10px;
-margin-left: auto;
-margin-top: 5px;
-font-size: medium;
-}
-.label{
-margin-left: 20px;
-margin-top: 20px;
-font-size: medium;
-}
-.text{
-margin-left: 20px;
+    
+    border-radius: 20px;
+    color: rgb(79, 47, 11);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    align-items: center;
+    justify-content: center;
 }
 .form-control{
-padding-top: 5px;
-width: 670px;
-height: 50;
-}
-.row{
-margin-left: 20px;
-font-size: medium;
-margin-block-start: 1%;
-font-family: 'Times New Roman', Times, serif;
-}
-h1 span{
-    color: rgb(184, 124, 56);
-    font-size: 25px;
+    width:500px;
+    text-align: center;
+    
+    color: rgb(10, 7, 5);
 }
