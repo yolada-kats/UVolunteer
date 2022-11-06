@@ -96,49 +96,34 @@
                 font-family: Georgia, 'Times New Roman', Times, serif;
             }
 
-            .bar .buttons {
-                position: absolute;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                height: 100%;
+            h1 span{
+                color: rgb(184, 124, 56);
+                font-size: 25px;
+            }
+
+            .social {
+                position: fixed;
+                top: 350px;
                 right: 10px;
-            }
-
-            .bar .buttons .b1, .b2 {
+                transform: translateY(-50%);
                 display: flex;
-                align-items: center;
                 justify-content: center;
-                color: rgb(39, 23, 6);
-                border: none;
-                border-radius: 5px;
-                margin-left: 10px;
-                width: 200px;
-                height: 40px;
-                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                font-size: 20px;
-                font-weight: 500;
-                cursor: pointer;
+                align-items: center;
+                flex-direction: column;
             }
 
-            .bar .buttons .b2 {
-                background-color: rgb(39, 23, 6);
-                color: white;
+            .social li {
+                list-style: none;
             }
 
-            .bar .buttons .b1:active,
-            .bar .buttons .b2:active {
-                color: white;
-                           
+            .social li a {
+                display: inline-block;
+                margin: 5px 0;
+                transform: scale(0.6);
+                filter: invert(1);
             }
 
-            .bar .buttons .b1:hover,
-            .bar .buttons .b2:hover {
-                background-color: rgb(57, 34, 9);
-                color: white;
-            }
-
-            .personal_info {
+            .container {
                 position: absolute;
                 top: 150px;
                 left: 400px;
@@ -152,15 +137,15 @@
                 overflow: hidden;
             }
 
-            .personal_info .text_info {
+            .container .text_info {
                 display: flex;
             }
             
-            .personal_info .text_info img {
+            .container .text_info img {
                 height: 200px;
             }
 
-            .personal_info .text_info text {
+            .container .text_info text {
                 display: flex;
                 flex-direction: column;
                 padding-top: 15px;
@@ -168,21 +153,42 @@
                 font-size: 110%;
             }
 
-            .personal_info .comments {
+            .container .comments {
                 padding-top: 15px;
                 padding-left: 15px;
                 padding-right: 15px;
-                margin-bottom: 200px;
+                padding-bottom: 20px;
                 font-size: 110%;
             }
             
-            .personal_info .comments p {
+            .container .comments p {
                 font-size: 95%;
                 margin-top: 15px;
                 margin-bottom: 15px;
                 text-align: justify;
                 text-justify: inter-word;
             }
+            
+            .container .update {
+                background-color: rgb(39, 23, 6);
+                color: white;
+                border-color: antiquewhite;
+                width: 200px;
+                margin-left: 275px;
+                height: 35px;
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                cursor: pointer;
+                border-radius: 10px;
+                font-size: 105%;
+                font-weight: 500;
+            }
+            
+            .container .update:hover {
+                background-color: rgb(95, 56, 15);
+            }
+
 
         </style>
     </head>
@@ -194,12 +200,11 @@
         <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="person-outline"></ion-icon></span><span class="button_text">Profil</span></button></li>
         <li><a href ="SearchPage.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="search-outline"></span><span class="button_text">Search</span></button></a></li>
         <li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favorites</span></button></li>
-        <li><a href ="Application.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
         </ul>
 
         
 
-        <div class="personal_info">
+        <div class="container">
             <div class="text_info"> 
                 <img src="images/member1.png">
                 <div class="text">
@@ -214,22 +219,19 @@
                 <p>
                 </p>
             </text>
+            <a href="UpdateProfile.html" style="text-decoration: none">
+                <button class="update">Update</button>
+            </a>
         </div>
 
         <div type="div" class="bar">
-            <h1> UVolunteer </h1>
-            <div class="buttons">
-               <a href ="Login.html" style="text-decoration: none">
-               <button class="b1">
-                    Log in
-                </button>
-                </a>
-                <a href ="Signin.html" style="text-decoration: none">
-                <button class="b2">
-                    Sing in
-                </button> 
-                </a>
-            </div>
+            <h1>U<span class="color">ni</span>Volunteer </h1>
         </div>
+
+        <ul class="social" >    
+            <li><a href="#"><img src="images/facebook .png"></a></li>
+            <li><a href="#"><img src="images/instagram.png"></a></li>
+            <li><a href="#"><img src="images/twitter.png"></a></li>
+        </ul>
     </body>
 </html>
