@@ -1,0 +1,64 @@
+
+body {
+    position: absolute;
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.text-color{
+    color:rgb(79, 47, 11);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgb(176, 160, 131);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+.btn-light{
+    color:rgb(243, 241, 239);
+    background-color:rgb(74, 44, 12);;
+    border-color: antiquewhite;
+    width: 250px;
+    height: 45px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 140px;
+    font-size: 130%;
+    
+
+}
+.btn-light:hover{
+    background-color: rgb(114, 66, 15);
+    color: white;
+}
+.container {
+    position: absolute;
+    background-color:rgba(255, 238, 214, 0.596);
+    left: 500px;
+    top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.form-group{
+    border-radius: 20px;
+    color: rgb(79, 47, 11);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
+    justify-content: center;
+}
+.form-control{
+    width:500px;
+    text-align: center;
+    color: rgb(10, 7, 5);
+}

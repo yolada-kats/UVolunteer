@@ -2,303 +2,60 @@
 <html lang="en">
 	<head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<meta name="description" content="Lab exercise template 2019-2020">
-	<link rel="icon" href="images/favicon.ico">
+	
 
-	<title>Application Form</title>
+	<title>Update Profile</title>
 
 	<!-- Bootstrap core CSS -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">	
 	<!-- Bootstrap Optional theme -->
-	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-	<style>
-		*{
-			padding: 0;
-			margin: 0;  
-		}
-		body {
-			position: absolute;
-			background-image: url("images/background.png");
-			background-repeat: no-repeat;
-			background-attachment: fixed;
-			background-position: center;
-			background-size: cover;
-		}
-		
-		.menu {
-			position: absolute;
-			display: flex;
-			flex-direction: column;
-			top: 115px;
-			left: 15px;
-		}
 
-		.menu li {
-			list-style-type: none;
-			height: 50px;
-			margin-top: 50px;                 
-		}
+    <link rel="stylesheet" href="application.css">
 
-		.menu button{
-			height: 100%;
-			width: 100%;
-			display: inline-flex;
-			align-items: center;
-			background-color: rgb(79, 47, 11);
-			color:rgb(255, 255, 255);
-			border: none;
-			border-radius: 5px;
-			outline: none;
-			font-family: 'Times New Roman', Times, serif;
-			font-size: 110%;
-			font-weight: 500;
-			overflow: hidden;
-			cursor: pointer;
-		}
-		
-		.menu button .button_text{
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100%;
-			width: 180px;
-			background-color: rgb(255, 255, 255);
-			color: rgb(39, 23, 6);
-		}
-		.menu button .button_icon{
-			display: flex;
-			align-items: center;
-			height: fit-content;
-			font-size: 25px;
-			margin-left: 20px;
-			margin-right: 20px;
-		}
-		
-		.menu .button .button_text:active{
-			background-color: rgb(55, 33, 9);
-			color: white;
-		}
-		.menu .button:hover{
-			background-color: rgb(55, 33, 9);
-		}
-		
-		.menu .button:hover ~ .button_text{
-			display: block;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100%;
-			width: 150px;
-			background-color: rgb(255, 255, 255);
-			color: rgb(39, 23, 6);
-		}
+</head>
+<body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-6 col-md-9">
+        
+        <form method="POST" actio="#">
+          <h2 class="text-color">Application Form</h2>
+          <br>
+            <div class="form-group">
+                <label for="organization">Organization:</label>
+                <input type="organization" class="form-control" id="organization" placeholder="Enter your organization name" name="organization">
+              </div>
+              <div class="form-group">
+                <label for="city">City:</label>
+                <input type="city" class="form-control" id="city" placeholder="Enter your city's name" name="city">
+              </div>
+              <div class="form-group">
+                <label for="url">URL:</label>
+                <input type="url" class="form-control" id="url" placeholder="Enter your url" name="url">
+              </div>
 
+            <div class="form-group">
+                <label for="date">Date:</label>
+                <input type="date" class="form-control" placeholder="date *" name="date" onfocus="(this.type = 'date')">
+              </div>
+            
+              <div class="form-group">
+                <label for="image">Image: </label>
+                <input id="imageUpload" type="file" name="profile_photo" class="form-control" style="font-size:medium; font-family: 'Times New Roman', Times, serif;" placeholder="Photo" >
+              </div>
 
-		.bar {
-			margin: 0;
-			padding: 0;
-			position: fixed;
-			background-color: rgb(79, 47, 11);
-			display: flex;       
-			width: 100%;
-			height: 90px;
-		}
+            
+            </div>
+            <div class="form-group">
+              <a href="StudentProfile.html" style="text-decoration: none; color: white;" ><button type="submit" class="btn btn-light">Update</button></a>
+            </div>
+            </div>
+        
 
-		.bar h1 {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			height: 100%;
-			color: white;
-			padding-left: 10px; 
-			font-size: 40px;
-			font-weight: 500;
-			font-family: Georgia, 'Times New Roman', Times, serif;
-		}
+          </form>
+            
+            
+        </div>
 
-		.container {
-			position: fixed;
-			color: white;
-			top: 200px;
-			left: 350px;
-		}
-
-		.container p {
-			font-size: 18px;
-			top: 80px;
-			width: 800px;
-			padding-top: 30px;
-			text-align: justify;
-			text-justify: inter-word;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-		}
-
-		.container h1 {
-			position: fixed;
-			display: flex;                
-		}
-		
-		h1 span{
-			color: rgb(184, 124, 56);
-			font-size: 25px;
-		}
-
-		.social {
-			position: fixed;
-			top: 350px;
-			right: 10px;
-			transform: translateY(-50%);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			flex-direction: column;
-		}
-
-		.social li {
-			list-style: none;
-		}
-
-		.social li a {
-			display: inline-block;
-			margin: 5px 0;
-			transform: scale(0.6);
-			filter: invert(1);
-		}
-		.text-color{
-			color:rgb(79, 47, 11);
-			text-align: center;
-			text-shadow: 2px 2px 4px rgb(176, 160, 131);
-			font-family: Georgia, 'Times New Roman', Times, serif;
-			
-		}
-		.btn-light{
-			color:rgb(243, 241, 239);
-			background-color:rgb(74, 44, 12);;
-			border-color: antiquewhite;
-			width: 250px;
-    		height: 45px;
-    		margin-top: 20px;
-    		margin-bottom: 10px;
-			font-family: Georgia, 'Times New Roman', Times, serif;
-			cursor: pointer;
-			border-radius: 10px;
-			margin-left: 140px;
-			
-
-		}
-		.btn-light:hover{
-			background-color: rgb(114, 66, 15);
-    		color: white;
-		}
-		.container{
-			position:absolute;
-			background-color:rgba(255, 238, 214, 0.596);
-			display:flex;
-			align-items: center;
-			justify-content: center;
-			width: 800px;
-			margin-top: -40px;
-			margin-bottom: 15px;
-			border-radius: 10px;
-			
-		}
-		
-		.form-group{
-			
-			border-radius: 20px;
-			color: rgb(79, 47, 11);
-			font-family: Georgia, 'Times New Roman', Times, serif;
-			
-			align-items: center;
-			justify-content: center;
-		}
-		.form-control{
-			width:500px;
-			text-align: center;
-			
-			color: rgb(10, 7, 5);
-		}
-
-		
-		
-		
-	</style>
-	</head>
-    <body>
-		<body>
-			<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-			<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-			<ul class="menu">
-			<li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></li>
-			<li><a href ="org_profile.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="person-outline"></ion-icon></span><span class="button_text">Profil</span></button></li>
-			<li><a href ="SearchPage.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="search-outline"></span><span class="button_text">Search</span></button></a></li>
-			<li><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favorites</span></button></li>
-			<li><a href ="Application.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
-			</ul>
-	
-	
-			<div type="div" class="bar">
-				<h1>U<span class="color">ni</span>Volunteer </h1>
-			</div>
-
-
-		<div class="container">
-				<div class="col-6 col-md-9">
-				<div class="row justify-content-center">
-				
-			<h2 class="text-color">Application form</h2>
-			
-			<br>
-			<form method="POST" action="#">
-				<div class="form-group">
-					<label for="organization">Organization:</label>
-					<input type="organization" class="form-control" id="organization" placeholder="Enter the name of the organization" name="organization">
-				  </div>
-				  <div class="form-group">
-					<label for="City">City:</label>
-					<input type="city" class="form-control" id="city" placeholder="Enter the city's name" name="city">
-				  </div>
-	
-				<div class="form-group">
-					<label for="date">Events Date:</label>
-					<input type="date" class="form-control" placeholder="date *" name="date" onfocus="(this.type = 'date')" required autofocus>
-				  </div>
-
-				  <div class="form-group">
-					<label for="url">Url Application:</label>
-					<input type="url" class="form-control" placeholder="Enter the url" name="url" >
-				  </div>
-				
-				  <div class="form-group">
-					<label for="comments">Comments: </label>
-					<textarea type="comments" class="form-control" id="comments" placeholder="Enter little Bio" name="comments">
-					</textarea>
-				  </div>
-				 
-				  <div class="form-group">
-					<label for="image">Image: </label>
-					<input id="imageUpload" type="file" name="profile_photo" class="form-control" style="font-size:medium; font-family: 'Times New Roman', Times, serif;" placeholder="Photo" required="" capture>
-				  </div>
-
-
-
-				
-				</div>
-				<div class="form-group">
-					<button type="submit" class="btn btn-light">Upload</button>
-				</div>
-				</div>
-			
-
-			  </form>
-				
-				
-			</div>
-    
-    </body>
+</body>
 </html>
