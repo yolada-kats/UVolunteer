@@ -171,14 +171,45 @@
 			filter: invert(1);
 		}
 		.text-color{
-			color:rgb(155, 79, 4);
+			color:rgb(79, 47, 11);
+			text-align: center;
+			text-shadow: 2px 2px 4px rgb(176, 160, 131);
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			
 		}
-		.btn-dark{
-			color:coral;
-			background-color:chocolate;
+		.btn-light{
+			color:rgb(243, 241, 239);
+			background-color:rgb(74, 44, 12);;
 			border-color: antiquewhite;
+			margin-left: 240px;
+    		width: 250px;
+    		height: 45px;
+    		margin-top: 20px;
+    		margin-bottom: 10px;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+			cursor: pointer;
+			border-radius: 10px;
+			
 
 		}
+		.btn-light:hover{
+			background-color: rgb(114, 66, 15);
+    		color: white;
+		}
+		.container{
+			background-color:rgba(255, 238, 214, 0.596);
+			width: 800px;
+			margin-top: -40px;
+			margin-bottom: 15px;
+			border-radius: 10px;
+			
+		}
+		.form-group{
+			border-radius: 20px;
+			color: rgb(79, 47, 11);
+			font-family: Georgia, 'Times New Roman', Times, serif;
+		}
+
 		
 		
 		
@@ -205,7 +236,7 @@
 			<div class="container">
 				<div class="row justify-content-center">
 				<div class="col-6 col-md-9">
-			<h2 class="text-color">Center aligned form</h2>
+			<h2 class="text-color">Application form</h2>
 			<br>
 			<form method="POST" actio="#">
 				<div class="form-group">
@@ -222,19 +253,19 @@
 				  </div>
 				  
 			
-						<div class="form-group">
+				<div class="form-group">
 					<label for="Birthday">Birthday:</label>
 					<input type="birthday" class="form-control" placeholder="Birthday *" name="date" onfocus="(this.type = 'date')" required autofocus>
 				  </div>
 				
 				  <div class="form-group">
 					<label for="comments">Little Bio: </label>
-					<textarea type="comments" class="form-control" id="cmments" placeholder="Enter little Bio" name="comments">
+					<textarea type="comments" class="form-control" id="comments" placeholder="Enter little Bio" name="comments">
 					</textarea>
 				  </div>
 
 				<div class="form-group">
-					<button type="submit" class="btn btn-dark">Upload</button>
+					<button type="submit" class="btn btn-light">Upload</button>
 				</div>
 			  </form>
 				</div>
