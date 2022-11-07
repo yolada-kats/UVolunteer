@@ -1,0 +1,189 @@
+*{
+    padding: 0;
+    margin: 0;  
+}
+body {
+    position: absolute;
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.menu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 115px;
+    left: 15px;
+}
+
+.menu li {
+    list-style-type: none;
+    height: 50px;
+    margin-top: 50px;                 
+}
+
+.menu button{
+    height: 100%;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    background-color: rgb(79, 47, 11);
+    color:rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 110%;
+    font-weight: 500;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.menu button .button_text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(255, 255, 255);
+    color: rgb(39, 23, 6);
+    height: 100%;
+    width: 200px;
+}
+.menu button .button_icon{
+    display: flex;
+    align-items: center;
+    height: fit-content;
+    font-size: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.menu .button .button_text:active{
+    background-color: rgb(55, 33, 9);
+    color: white;
+}
+.menu .button:hover{
+    background-color: rgb(55, 33, 9);
+}
+
+.bar {
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    background-color: rgb(79, 47, 11);
+    display: flex;       
+    width: 100%;
+    height: 90px;
+}
+
+.bar h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: white;
+    padding-left: 10px; 
+    font-size: 40px;
+    font-weight: 500;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.bar .buttons {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    right: 10px;
+}
+
+.bar .buttons .b1, .b2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(39, 23, 6);
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 200px;
+    height: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.bar .buttons .b2 {
+    background-color: rgb(39, 23, 6);
+    color: white;
+}
+
+.bar .buttons .b1:active,
+.bar .buttons .b2:active {
+    color: white;
+               
+}
+
+.bar .buttons .b1:hover,
+.bar .buttons .b2:hover {
+    background-color: rgb(57, 34, 9);
+    color: white;
+}
+
+.container {
+    position:fixed;
+    margin-top: 11%;  
+    left: 22%;               
+    width: 50%;
+    height: 60%;
+}
+
+.social {
+    position: fixed;
+    top: 350px;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+.flex-box{
+    position:static;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background:rgba(241, 212, 170, 0.89);
+    color: black;
+}
+.title-and-icon{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+h2{
+    color: black;
+}
+h1 span{
+    color: rgb(184, 124, 56);
+    font-size: 25px;
+}
+.inside-box-icon{
+    width: 350px;
+    height: 300px;
+}
