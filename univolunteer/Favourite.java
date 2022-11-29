@@ -51,35 +51,34 @@ public class Favourite {
     }
 
 
-    public void setOrganization(String username) {
-        this.username = username;
+   
+    public void setOrganization(String organization) {
+        this.organization = organization;
     }
 
     public String getOrganization() {
-        return username;
+        return organization;
     }
-    public void setUrl(String username) {
-        this.username = username;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
     public String getUrl() {
-        return username;
+        return url;
     }
-    public void setDate(String username) {
-        this.username = username;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public String getDate() {
-        return username;
+    public Date getDate() {
+        return date;
     }
-    public void setRegion(String username) {
-        this.username = username;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     public String getRegion() {
-        return username;
+        return region;
     }
-
-
     
 }
