@@ -14,7 +14,7 @@ public class Favourite {
     private Date date;
     private String region; 
  
-    public Favourite(String url, String organization, String date, String region){
+    public Favourite(String url, String organization, Date date, String region){
         this.organization = organization;
         this.url = url;
         this.date = date;
@@ -40,12 +40,12 @@ public class Favourite {
                 Favourite fav = new Favourite(rs.getString("url"),rs.getString("organization"),rs.getDate("event_date"),rs.getString("region"));
 				listFavourite.add(fav);
 			} 
-		} catch (SQLException e) {
+            rs.close();
+			stmt.close(); 
+		} catch (Exception e) {
 			throw new Exception(e.getMessage());
 		} finally {
 			db.close();
-			rs.close();
-			stmt.close(); 
 		}
 		return listFavourite;
     }
