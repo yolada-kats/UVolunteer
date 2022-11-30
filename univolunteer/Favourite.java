@@ -31,7 +31,7 @@ public class Favourite {
 		List<Favourite> listFavourite = new ArrayList<Favourite>();
 
 		PreparedStatement stmt = null;
-		String sql = "SELECT * FROM application,favourite WHERE favourite.username = ? AND favourite.url=application.url;"; 
+		String sql = "SELECT application.url,organization,event_date,region FROM application,favourites WHERE favourites.username = ? AND favourites.url=application.url;"; 
 		try {
 			stmt = con.prepareStatement(sql);  
             stmt.setString(1, user.getUsername());
