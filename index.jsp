@@ -34,6 +34,26 @@
         </ul>
         <div type="div" class="bar">
             <h1>U<span class="color">ni</span>Volunteer </h1>
+            <div class="buttons">
+                <% if(session.getAttribute("userObj") == null){%>
+                    <a href ="login.jsp" style="text-decoration: none">
+                    <button class="b1">
+                        Log in
+                    </button>
+                    </a>
+                    <a href ="signin.jsp" style="text-decoration: none">
+                    <button class="b2">
+                        Sing in
+                    </button> 
+                    </a>
+                 <%}else{%>
+                    <a href ="logout.jsp" style="text-decoration: none">
+                        <button class="b1">
+                            Log out
+                        </button>
+                    </a>
+                <%}%>
+             </div>
         </div>
 
         <div class="container">
@@ -48,6 +68,7 @@
                 based on your own needs, skills and other criteria. Find the best 
                 programs suitable for you and contact their teams. Don't miss out, take action
                 and sing in now.
+            </br>
             </br>
                  ~ If you are part of a nonprofit organization or a
                 project organizer searching for student volunteers and want to connect with students around the world, 

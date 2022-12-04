@@ -129,11 +129,11 @@ public class UserDAO {
 
     }
 
-    public void removeFavourite(Application application){
+    public void removeFavourite(String url,User user) throws Exception{
         Connection con = null;
 
 		//Define the SQL statement (to be executed)
-		String sql= "DELETE FROM 'favourite' WHERE 'url' = ? ;";
+		String sql= "DELETE FROM 'favourite' WHERE 'url' = ? AND 'username' = ? ;";
 	
 		DB db = new DB();
 				
@@ -141,28 +141,24 @@ public class UserDAO {
 			//open connection and get Connection object			
 			con = db.getConnection();
             PreparedStatement stmt = con.prepareStatement( sql );
-            stmt.setString(1, application.getUrl());
+            stmt.setString(1, url);
+			stmt.setString(2, user.getUsername());
             stmt.executeUpdate();
 			
 			//close everything to release resources	
 			stmt.close();
 			db.close();
 
-            } catch (Exception e) {
-                throw new Exception(e.getMessage());
-            
-            } finally {
-			
-			    try {
-				    db.close();
-			    } catch (Exception e) {				
-				 
-			    }
-			
-		}
-
+		} catch (SQLException e) {
+			throw new Exception(e.getMessage());
+		} finally {
+			try {
+                db.close();
+            } catch (Exception e) {				
+             
+            }		
+		}		
 
     }
-
     
 }
