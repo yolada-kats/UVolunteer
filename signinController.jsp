@@ -8,15 +8,11 @@
     User user = new User(username,password,type);
     try{
         uDAO.register(user);
-        session.setAttribute("userObj",user);
-        if(type.equals("Student")){%>
+        session.setAttribute("userObj",user);%>
             <jsp:forward page="index.jsp"/>
-        <%}else{%>
-            <jsp:forward page="index.jsp"/>
-        <%}%>
     <%}catch(Exception e){
-        request.setAttribute("message","Wrong username or password");
+        request.setAttribute("message", e.getMessage());
         %>
-        <jsp:forward page="Signin.jsp"/>
+        <jsp:forward page="signin.jsp"/>
     <%}
 %>

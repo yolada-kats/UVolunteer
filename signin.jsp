@@ -7,7 +7,9 @@
     </head>
     <body>
         <div class="container">
-        <h1> </h1>
+            <% if(request.getAttribute("message") != null) { %>		
+                <div class="alert" style="margin-bottom: 10%; margin-top: 10%; text-align: center; color: #ea2222;;"><%=(String)request.getAttribute("message") %></div>
+            <% } %>
         <form method="post" action="signinController.jsp">
             <div class="txt_field">
                 <input type="text"  name="username" required>

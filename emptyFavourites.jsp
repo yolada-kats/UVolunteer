@@ -33,11 +33,13 @@
             <h1>U<span class="color">ni</span>Volunteer </h1>
         </div>
 
-        <div class="container">  
-            <div class="flex-box">
-                <div class="title-and-icon">
-                    <img class="inside-box-icon" src="images/emptyfavoriteicon.png">
-                    <h2>You have no favorite applications yet</h2>
+        <div class="container"> 
+            <div class="flex-container">   
+                <div class="flex-box">
+                    <div class="title-and-icon">
+                        <img class="inside-box-icon" src="images/emptyfavoriteicon.png">
+                        <h2>You have no favorite applications yet</h2>
+                    </div>
                 </div>
             </div>
         </div>

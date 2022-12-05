@@ -32,9 +32,7 @@
                 <li><a href ="favouriteController.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favourites</span></button></a></li>
                 <li><a href ="Application.html" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
         <%}%></ul>
-            <div type="div" class="bar">
-                <h1>U<span class="color">ni</span>Volunteer </h1>
-            </div>
+
     <div class="container">
         <div class="big-flex-box">
             <%
@@ -67,6 +65,16 @@
             <%}%>    
         <%}%> 
         </div>
+    </div>
+    <div type="div" class="bar">
+        <h1>U<span class="color">ni</span>Volunteer </h1>
+        <div class="buttons">
+                <a href ="logout.jsp" style="text-decoration: none">
+                    <button class="b1">
+                        Log out
+                    </button>
+                </a>
+         </div>
     </div>
 
         <ul class="social" >    

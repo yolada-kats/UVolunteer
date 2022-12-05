@@ -111,15 +111,6 @@ body {
     right: 10px;
 }
 
-.bar .buttons {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    right: 10px;
-}
-
 .bar .buttons .b1, .b2 {
     display: flex;
     align-items: center;
@@ -128,7 +119,7 @@ body {
     border: none;
     border-radius: 5px;
     margin-left: 10px;
-    width: 200px;
+    width: 100px;
     height: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
