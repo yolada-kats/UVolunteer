@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="univolunteer.*"%>
+<%@ page import="java.sql.Date"%>
 <html>
 	<head>
         <meta charset="utf-8">
@@ -28,16 +29,16 @@
 		String url = request.getParameter("url");
 		String organization = request.getParameter("organization");
 		String date = request.getParameter("date");
-		String city = request.getParameter("region");
+		String region = request.getParameter("region");
 
 		
 		
 		if((organization.length() >= 3)   ) {  
-            try{
+			try{
                 
                 Application apply = new Application(url, organization, date, region);
                 ApplicationDAO aDao = new ApplicationDAO();
-				aDao.register(apply); %>
+				aDao.registerApp(apply); %>
                 
 	    
 		<div class="page-header">
@@ -47,8 +48,12 @@
 					If you want to see your form go back to:
 			</div>
 			<button class="btn btn-primary" type="button" ><a href="SearchPage.jsp" style="text-decoration: none; color: white;"> < Application Form</a></button>
-		   
-
+			
+			<%}catch(Exception e){
+				request.setAttribute("message",e.getMessage());
+				%>
+			<%}%>
+			
 		   <% } else { %>
 			<div class="page-header">
 				<h2>Registration form has errors</h2>

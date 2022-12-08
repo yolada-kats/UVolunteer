@@ -16,7 +16,7 @@ public class ApplicationDAO {
 
             stmt.setString(1, application.getUrl());
             stmt.setString(2, application.getOrganization());
-            stmt.setDate(  3,application.getDate());
+            stmt.setString(3, application.getDate());
             stmt.setString(4, application.getRegion());
 
             stmt.executeUpdate();
