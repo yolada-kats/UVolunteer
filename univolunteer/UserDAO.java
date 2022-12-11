@@ -26,9 +26,9 @@ public class UserDAO {
             if (!rs.next()) {
                 throw new Exception("Wrong username or password");
             }
-            stmt.close();
-            rs.close();
             User user = new User(rs.getString("username"), rs.getString("password"), rs.getString("type"));
+            rs.close();
+            stmt.close();
             return user;
 
         } catch (Exception e) {
