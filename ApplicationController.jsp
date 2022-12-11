@@ -7,12 +7,32 @@
         
     
         <title>Application Form</title>
+		<style>
+			body {
+    			position: absolute;
+   				background-image: url("images/background.png");
+    			background-repeat: no-repeat;
+    			background-attachment: fixed;
+    			background-position: center;
+    			background-size: cover;
+			}
+			.text-color{
+    color:rgb(237, 235, 233);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+		
+
+		</style>
     
         <!-- Bootstrap core CSS -->
         <link rel="stylesheet" href="css/bootstrap.min.css">	
         <!-- Bootstrap Optional theme -->
     
-        <link href="application_controller.css" rel="stylesheet">
+       <!--<link href="application.css" rel="stylesheet">--> 
     
     
 	</head>
