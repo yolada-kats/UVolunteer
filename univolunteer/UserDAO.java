@@ -134,7 +134,7 @@ public class UserDAO {
         Connection con = null;
 
         // Define the SQL statement (to be executed)
-        String sql = "DELETE FROM 'favourite' WHERE 'url' = ? AND 'username' = ? ;";
+        String sql = "DELETE FROM favourites WHERE url = ? AND username = ? ;";
 
         DB db = new DB();
 

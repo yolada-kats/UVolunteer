@@ -1,6 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="univolunteer.*,java.util.List,java.util.ArrayList"%>
-
+<%  
+    UserDAO uDAO = new UserDAO();
+    User user = (User)session.getAttribute("userObj");
+    String url = request.getParameter("url");
+    try{
+        uDAO.removeFavourite(url,user);%>
+    <%}catch(Exception e){
+        request.setAttribute("message", e.getMessage());
+    }
+%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +25,7 @@
 		<%}%>
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <%User user = (User)session.getAttribute("userObj");
+        <%
         Favourite fav = new Favourite();
         List <Favourite> favourites = fav.listFavourites(user);
         %>

@@ -99,7 +99,7 @@ body {
     right: 10px;
 }
 
-.bar .buttons .b1, .b2 {
+.bar .buttons .b1{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +107,7 @@ body {
     border: none;
     border-radius: 5px;
     margin-left: 10px;
-    width: 200px;
+    width: 100px;
     height: 40px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 20px;
@@ -115,19 +115,12 @@ body {
     cursor: pointer;
 }
 
-.bar .buttons .b2 {
-    background-color: rgb(39, 23, 6);
-    color: white;
-}
-
-.bar .buttons .b1:active,
-.bar .buttons .b2:active {
+.bar .buttons .b1:active{
     color: white;
                
 }
 
-.bar .buttons .b1:hover,
-.bar .buttons .b2:hover {
+.bar .buttons .b1:hover{
     background-color: rgb(57, 34, 9);
     color: white;
 }
@@ -137,7 +130,7 @@ body {
     top: 250px;
     left: 550px;
     height: 400px;
-    width: 500px;
+    width: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;

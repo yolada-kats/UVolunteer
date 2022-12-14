@@ -31,6 +31,13 @@
 
         <div type="div" class="bar">
             <h1>U<span class="color">ni</span>Volunteer </h1>
+            <div class="buttons">
+                <a href ="logout.jsp" style="text-decoration: none">
+                    <button class="b1">
+                        Log out
+                    </button>
+                </a>
+         </div>
         </div>
 
         <div class="container"> 
