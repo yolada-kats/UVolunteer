@@ -22,9 +22,6 @@
 
 			}
 .btn-light{
-	align-items: center;
-    justify-content: center;
-	text-align: center;
     color:rgb(243, 241, 239);
     background-color:rgb(74, 44, 12);;
     border-color: antiquewhite;
@@ -35,7 +32,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 140px;
+    margin-left: 450px;
     font-size: 130%;
     
 
@@ -88,7 +85,8 @@
 			<div class="alert alert-success">
 					If you want to see your form go back to:
 			</div>
-			<button class="btn-light" type="button" ><a href="SearchPage.jsp" style="text-decoration: none; color: white;"> < Application Form</a></button>
+			<button class="btn-light" type="button" ><a href="SearchPage.html" style="text-decoration: none; color: rgba(235, 235, 235, 0.788);" >Check your Application</a></button>
+			
 			
 			<%}catch(Exception e){
 				request.setAttribute("message",e.getMessage());
@@ -111,7 +109,7 @@
 			</div>
 	
 			
-				<button class="btn-light" type="button" ><a href="Application.jsp" style="text-decoration: none; color: rgba(235, 235, 235, 0.788);" >Back to the Form</a></button>
+				<button class="btn-light" type="button"  ><a href="Application.jsp" style="align-items: center; color: rgba(235, 235, 235, 0.788);" >Back to the Form</a></button>
 			
 
 		<% } %>
