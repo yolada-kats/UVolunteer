@@ -16,15 +16,36 @@
     			background-position: center;
     			background-size: cover;
 			}
-			.text-color{
-    color:rgb(237, 235, 233);
-    display: flex;
-    align-items: center;
+			.page-header {
+				color:rgb(243, 241, 239);
+				text-align: center;
+
+			}
+.btn-light{
+	align-items: center;
     justify-content: center;
+	text-align: center;
+    color:rgb(243, 241, 239);
+    background-color:rgb(74, 44, 12);;
+    border-color: antiquewhite;
+    width: 250px;
+    height: 45px;
+    margin-top: 20px;
+    margin-bottom: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 140px;
+    font-size: 130%;
     
+
 }
-		
+.btn-light:hover{
+    background-color: rgb(114, 66, 15);
+    color: white;
+}
+
+	
 
 		</style>
     
@@ -53,7 +74,7 @@
 
 		
 		
-		if((organization.length() >= 3)   ) {  
+		if((organization.length() >= 3)) {  
 			try{
                 
                 Application apply = new Application(url, organization, date, region);
@@ -67,7 +88,7 @@
 			<div class="alert alert-success">
 					If you want to see your form go back to:
 			</div>
-			<button class="btn btn-primary" type="button" ><a href="SearchPage.jsp" style="text-decoration: none; color: white;"> < Application Form</a></button>
+			<button class="btn-light" type="button" ><a href="SearchPage.jsp" style="text-decoration: none; color: white;"> < Application Form</a></button>
 			
 			<%}catch(Exception e){
 				request.setAttribute("message",e.getMessage());
@@ -89,13 +110,13 @@
 				
 			</div>
 	
-			<button class="btn btn-primary" type="button" ><a href="Application.jsp" style="text-decoration: none; color: white;"> < Back to the form</a></button>
+			
+				<button class="btn-light" type="button" ><a href="Application.jsp" style="text-decoration: none; color: rgba(235, 235, 235, 0.788);" >Back to the Form</a></button>
+			
 
 		<% } %>
-        <%if(request.getAttribute("message") != null) { %>		
-            <div class="alert alert-danger" role="alert"><%=(String)request.getAttribute("message") %></div>
-            <button class="btn btn-primary" type="button" ><a href="Application.jsp" style="text-decoration: none; color: white;"> < Back to the form</a></button>
-         <%} %>
+
+        
 
 		</div>
 		<!-- footer -->
