@@ -49,7 +49,7 @@
             <%}%>
                 <div class="flex-box">
                     <div class="title-and-icon">
-                        <img class="inside-box-icon" src="images/TEDx.jpg" alt="Company Image">
+                        <img class="inside-box-icon" src="images/flexboximage.png" alt="Company Image">
                         <b><%= f.getOrganization()%></b>
                     </div>
                     <div class="info-icons">

@@ -28,7 +28,10 @@
         <%
         Favourite fav = new Favourite();
         List <Favourite> favourites = fav.listFavourites(user);
-        %>
+        boolean ans = favourites.isEmpty();
+        if(ans){%>
+            <jsp:forward page="emptyFavourites.jsp"/>
+        <%}%>
         <ul class="menu">
             <%if(user.getType().equals("Student")){%>
                 <li><a href ="index.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></a></li>
