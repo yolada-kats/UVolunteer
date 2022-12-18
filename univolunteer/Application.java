@@ -1,13 +1,15 @@
 package univolunteer;
 
+import java.sql.Date;
+
 public class Application {
 
     private String organization;
     private String url;
-    private String date;
+    private Date date;
     private String region;
 
-    public Application(String url, String organization, String date, String region) {
+    public Application(String url, String organization, Date date, String region) {
         this.organization = organization;
         this.url = url;
         this.date = date;
@@ -34,11 +36,11 @@ public class Application {
         return url;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
