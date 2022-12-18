@@ -1,7 +1,5 @@
 package univolunteer;
 
-import java.sql.Date;
-
 public class Application {
 
     private String organization;
@@ -14,6 +12,10 @@ public class Application {
         this.url = url;
         this.date = date;
         this.region = region;
+    }
+
+    public Application() {
+
     }
 
     public void setOrganization(String organization) {
