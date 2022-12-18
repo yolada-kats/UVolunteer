@@ -1,6 +1,8 @@
 package univolunteer;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ApplicationDAO {
     public void registerApp(Application application) throws Exception {
@@ -34,5 +36,92 @@ public class ApplicationDAO {
         }
         // end of registerApp
     }
+
     // end of class
+    public List<Application> findApplications(String keyword) throws Exception {
+
+        String sql = "SELECT application.url,organization,event_date,region FROM application WHERE application.region = ? OR application.organization = ? OR application.url = ? OR application.event_date = ?;";
+        Connection con = null;
+        DB db = new DB();
+        List<Application> findApplications = new ArrayList<Application>();
+        try {
+
+            con = db.getConnection();
+            PreparedStatement stmt = con.prepareStatement(sql);
+
+            stmt.setString(1, keyword);
+
+            ResultSet rs = stmt.executeQuery();
+
+            if (!rs.next()) {
+
+                rs.close();
+                stmt.close();
+                db.close();
+                throw new Exception("No Organizations found");
+
+            }
+            while (rs.next()) {
+                Application foundApplications = new Application(rs.getString("url"), rs.getString("organization"),
+                        rs.getString("date"), rs.getString("region"));
+                findApplications.add(foundApplications);
+            }
+
+            rs.close();
+            stmt.close();
+            db.close();
+
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        } finally {
+            try {
+                db.close();
+            } catch (Exception e) {
+
+            }
+        }
+
+        return findApplications;
+    }
+    // end of findOrg
+
+    public List<Application> listApplications() throws Exception {
+        List<Application> appl = new ArrayList<Application>();
+
+        String sql = "SELECT * FROM application;";
+        Connection con = null;
+        DB db = new DB();
+
+        try {
+
+            con = db.getConnection();
+            PreparedStatement stmt = con.prepareStatement(sql);
+            // no need of setting parameters
+            ResultSet rs = stmt.executeQuery();
+
+            while (rs.next()) {
+
+                appl.add(new Application(rs.getString("url"), rs.getString("organization"), rs.getString("date"),
+                        rs.getString("region")));
+
+            }
+
+            rs.close();
+            stmt.close();
+            db.close();
+
+            return appl;
+
+        } catch (Exception e) {
+            throw new Exception(e.getMessage());
+        } finally {
+
+            try {
+                db.close();
+            } catch (Exception e) {
+
+            }
+
+        }
+    }
 }
