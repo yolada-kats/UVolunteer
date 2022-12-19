@@ -1,7 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="univolunteer.*,java.util.List,java.util.ArrayList"%>
-<%@ page errorPage="noapplications.jsp"%>
-
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,14 +11,9 @@
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <%
-        User user = (User)session.getAttribute("userObj");
-        String keyword  = request.getParameter("searchinput");
-        ApplicationDAO search = new ApplicationDAO();
-        List <Application> applications = search.findApplications(keyword);
-        %>
         <ul class="menu">
-            <% if(session.getAttribute("userObj") == null){%>
+            <% User user = (User)session.getAttribute("userObj");
+            if(session.getAttribute("userObj") == null){%>
                 <li><a href ="index.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></a></li>
                 <li><a href ="UpdateProfile.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="person-outline"></ion-icon></span><span class="button_text">Profile</span></button></a></li>
                 <li><a href ="SearchPage.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="search-outline"></span><span class="button_text">Search</span></button></a></li>
@@ -39,46 +32,22 @@
                     <li><a href ="favouriteController.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favourites</span></button></a></li>
                     <li><a href ="Application.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
             <%}
-            }%>
-        </ul>
+            }%></ul>
         <div class="container">
             <form method="post" action="searchapp.jsp">
                 <div class="search-bar">
                     <input type="text" name="searchinput" placeholder="Search for programs...">
                     <button type="submit"><img src="images/search.png"></button>
                 </div>
-                </form>
-        <div class="big-flex-box">
-            <%
-            int sumapp = 0;
-            for(Application app: applications){ 
-            sumapp +=  1;}
-            int totalapp = 0;
-            for(Application app: applications){ 
-            totalapp +=  1;
-            if((totalapp%2)==1){
-            %>
-            <div class="flex-container">
-            <%}%>
+        </form>
+            <div class="flex-container">   
                 <div class="flex-box">
                     <div class="title-and-icon">
-                        <img class="inside-box-icon" src="images/flexboximage.png" alt="Company Image">
-                        <b><%= app.getOrganization()%></b>
-                    </div>
-                    <div class="info-icons">
-                        <button class="info" type="button" disabled> <ion-icon name="compass-outline"></ion-icon> <%=app.getRegion() %></button>
-                        <button class="info" type="button" disabled> <ion-icon name="calendar-outline"></ion-icon>  <%=app.getDate()%></button>
-                    </div>
-                    <div class="info-buttons">
-                        <button class="application" type="submit"><a href=<%= app.getUrl()%> style="text-decoration: none; color: white;">Click here to visit</a></button>
-                        <button class="favorite" type="submit"> <ion-icon name="heart-outline"></ion-icon>Favourites</button>
+                        <img class="inside-box-icon" src="images/nosearch.png">
+                        <h2>No results</h2>
                     </div>
                 </div>
-            <%if((totalapp%2)!=1 || sumapp==totalapp){%>
-            </div>                  
-            <%}%>    
-            <%}%> 
-        </div>
+            </div>
         </div>
         <div type="div" class="bar">
             <h1>U<span class="color">ni</span>Volunteer </h1>

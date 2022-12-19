@@ -6,10 +6,10 @@ public class Application {
 
     private String organization;
     private String url;
-    private Date date;
+    private String date;
     private String region;
 
-    public Application(String url, String organization, Date date, String region) {
+    public Application(String url, String organization, String date, String region) {
         this.organization = organization;
         this.url = url;
         this.date = date;
@@ -36,11 +36,11 @@ public class Application {
         return url;
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 

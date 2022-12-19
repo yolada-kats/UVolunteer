@@ -23,7 +23,7 @@ public class ApplicationDAO {
 
             stmt.setString(1, application.getUrl());
             stmt.setString(2, application.getOrganization());
-            stmt.setDate(3, application.getDate());
+            stmt.setString(3, application.getDate());
             stmt.setString(4, application.getRegion());
 
             stmt.executeUpdate();
@@ -54,7 +54,7 @@ public class ApplicationDAO {
             ResultSet rs = stmt.executeQuery();
             while (rs.next()) {
                 Application app = new Application(rs.getString("url"), rs.getString("organization"),
-                        rs.getDate("event_date"), rs.getString("region"));
+                        rs.getString("event_date"), rs.getString("region"));
                 list.add(app);
             }
             rs.close();
@@ -86,7 +86,7 @@ public class ApplicationDAO {
             }
             while (rs.next()) {
             Application foundApplications = new Application(rs.getString("url"), rs.getString("organization"),
-            rs.getDate("event_date"), rs.getString("region"));
+            rs.getString("event_date"), rs.getString("region"));
             findApplications.add(foundApplications);
             }
             rs.close();
