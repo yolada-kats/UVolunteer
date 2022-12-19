@@ -95,7 +95,7 @@ public class UserDAO {
 
     }
 
-    public void setfavourite(User user, Application application) throws Exception {
+    public void setfavourite(User user, String url) throws Exception {
         Connection con = null;
 
         // Define the SQL statement (to be executed)
@@ -108,7 +108,7 @@ public class UserDAO {
             con = db.getConnection();
             PreparedStatement stmt = con.prepareStatement(sql);
             stmt.setString(1, user.getUsername());
-            stmt.setString(2, application.getUrl());
+            stmt.setString(2, url);
             stmt.executeUpdate();
 
             // close everything to release resources
