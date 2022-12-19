@@ -102,12 +102,12 @@ h1 span{
 }
 
 .profiles {
-    position: absolute;
+    position: fixed;
     padding-bottom: 100px;
 }
 
 .profiles li {
-    position: absolute;
+    position: fixed;
     list-style-type: none;
 }
 
@@ -130,12 +130,12 @@ h1 span{
 }
 
 .name {
-    color: black;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
     width: fit-content;
-    background-color: transparent;
     border: none;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 200%;
+    font-size: 40%;
     font-weight: 500;
     cursor: pointer;
     padding-bottom: 5px;
@@ -152,6 +152,7 @@ h1 span{
     border-radius: 15px;
     padding: 5px 10px;
 }
+
 .search-bar input{
     background: transparent;
     flex: 1;
@@ -162,6 +163,8 @@ h1 span{
     font-family: 'Times New Roman', Times, serif;
     color: whitesmoke;
 }
+
+
 ::placeholder{
     color: white;
 }
