@@ -85,7 +85,7 @@
 			<div class="alert alert-success">
 					If you want to see your form go back to:
 			</div>
-			<button class="btn-light" type="button" ><a href="SearchPage.html" style="text-decoration: none; color: rgba(235, 235, 235, 0.788);" >Check your Application</a></button>
+			<button class="btn-light" type="button" ><a href="SearchPage.jsp" style="text-decoration: none; color: rgba(235, 235, 235, 0.788);" >Check your Application</a></button>
 			
 			
 			<%}catch(Exception e){

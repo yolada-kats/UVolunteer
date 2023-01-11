@@ -311,7 +311,8 @@ button.favorite:hover {
   align-items: center;
 }
 .search-bar {
-  position:fixed;
+  position:absolute;
+  top:0;
   margin-bottom: 20px;
   width: 680px;
   height: 55px;
@@ -322,6 +323,7 @@ button.favorite:hover {
   background: rgba(255, 238, 214, 0.596);
   border-radius: 15px;
   padding: 5px 10px;
+  
 }
 .search-bar input{
   background: transparent;
