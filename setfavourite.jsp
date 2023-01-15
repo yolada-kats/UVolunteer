@@ -76,16 +76,16 @@
                         <div class="info-buttons">
                             <button class="application" type="submit"><a href=<%= app.getUrl()%> style="text-decoration: none; color: white;">Click here to visit</a></button>
                             <%
-                            String url = "";
+                            String url1 = "";
                             for(Favourite f: favorites){ 
                                 if(app.getUrl().equals(f.getUrl())){
-                                    String url = app.getUrl();
+                                    url1 = app.getUrl();
                                 }
                             }
-                            if(url.equals("")){%>
+                            if(url1.equals("")){%>
                             <button class="favorite" type="submit"><ion-icon name="heart-outline" id="button_icon"></ion-icon><a href="setfavourite.jsp?url=<%=app.getUrl()%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
-                            <%else{%>
-                            <button class="favorite" type="submit"><ion-icon name="heart" id="button_icon"></ion-icon><a href="setfavourite.jsp?url=<%=url%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
+                            <%}else{%>
+                            <button class="favorite" type="submit"><ion-icon name="heart" id="button_icon"></ion-icon>Favourites</button>
                             <%}%>
                             
                         </div>

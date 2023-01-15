@@ -70,16 +70,14 @@ public class ApplicationDAO {
     // end of class
     public List<Application> findApplications(String keyword) throws Exception {
         DB db = new DB();
-		Connection con = db.getConnection();
-		PreparedStatement stmt = null;
-        String sql = "SELECT * FROM application WHERE region = ? OR organization = ? OR event_date = ?;";
+		Connection con = null;
+        String sql = "SELECT * FROM application WHERE region = ? OR organization = ?;";
         List<Application> findApplications = new ArrayList<Application>();
         try {
-            stmt = con.prepareStatement(sql);    
+            con = db.getConnection();
+            PreparedStatement stmt = con.prepareStatement(sql);    
             stmt.setString(1, keyword);
             stmt.setString(2, keyword);
-            stmt.setString(3, keyword);
-
 			ResultSet rs = stmt.executeQuery(); 
             if (!rs.next()) {
                 throw new Exception("No Organizations found");
@@ -91,6 +89,8 @@ public class ApplicationDAO {
             }
             rs.close();
             stmt.close();
+            return findApplications;
+
         } catch (Exception e) {
             throw new Exception(e.getMessage());
         } finally {
@@ -101,7 +101,6 @@ public class ApplicationDAO {
             }
         }
 
-        return findApplications;
     }
    
 }

@@ -10,15 +10,10 @@
         <link rel="stylesheet" href="searchpage.css">
     </head>
     <body>
+        <%User user = (User)session.getAttribute("userObj");%>
 
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-        <%
-        User user = (User)session.getAttribute("userObj");
-        String keyword  = request.getParameter("searchinput");
-        ApplicationDAO search = new ApplicationDAO();
-        List <Application> applications = search.findApplications(keyword);
-        %>
         <ul class="menu">
             <% if(session.getAttribute("userObj") == null){%>
                 <li><a href ="index.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></a></li>
@@ -48,11 +43,17 @@
                     <button type="submit"><img src="images/search.png"></button>
                 </div>
                 </form>
+        <%
+        String keyword  = request.getParameter("searchinput");    
+        ApplicationDAO search = new ApplicationDAO();
+        List <Application> applications = search.findApplications(keyword);
+        %>
         <div class="big-flex-box">
             <%
             int sumapp = 0;
             for(Application app: applications){ 
-            sumapp +=  1;}
+            sumapp +=  1;
+            }
             int totalapp = 0;
             for(Application app: applications){ 
             totalapp +=  1;
@@ -71,8 +72,25 @@
                     </div>
                     <div class="info-buttons">
                         <button class="application" type="submit"><a href=<%= app.getUrl()%> style="text-decoration: none; color: white;">Click here to visit</a></button>
-                        <button class="favorite" type="submit"> <ion-icon name="heart-outline"></ion-icon>Favourites</button>
-                    </div>
+                        <%
+                        if(session.getAttribute("userObj") != null){
+                            Favourite fav = new Favourite();
+                            List <Favourite> favorites = fav.listFavourites(user);
+                            String url = "";
+                            for(Favourite f: favorites){ 
+                                if(app.getUrl().equals(f.getUrl())){
+                                    url = app.getUrl();
+                                }
+                            }
+                            if(url.equals("")){%>
+                            <button class="favorite" type="submit"><ion-icon name="heart-outline" id="button_icon"></ion-icon><a href="setfavourite.jsp?url=<%=app.getUrl()%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
+                            <%}else{%>
+                            <button class="favorite" type="submit"><ion-icon name="heart" id="button_icon"></ion-icon>Favourites</button>
+                            <%}
+                        }%>
+                        <% if(session.getAttribute("userObj") == null){%>
+                                <button class="favorite" type="submit"><ion-icon name="heart-outline" id="button_icon"></ion-icon><a href="setfavourite.jsp?url=<%=app.getUrl()%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
+                        <%}%>                    </div>
                 </div>
             <%if((totalapp%2)!=1 || sumapp==totalapp){%>
             </div>                  
