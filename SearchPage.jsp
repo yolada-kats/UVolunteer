@@ -23,6 +23,7 @@
                 <li><a href ="favouriteController.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="star-outline"></span><span class="button_text">Favourites</span></button></a></li>
              <%}
               if(session.getAttribute("userObj") != null){
+
              if(user.getType().equals("Student")){%>
                     <li><a href ="index.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="home-outline"></span><span class="button_text">Home</span></button></a></li>
                     <li><a href ="UpdateProfile.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="person-outline"></ion-icon></span><span class="button_text">Profile</span></button></li>
@@ -67,8 +68,31 @@
                         <button class="info" type="button" disabled> <ion-icon name="calendar-outline"></ion-icon>  <%=app.getDate()%></button>
                     </div>
                     <div class="info-buttons">
+<<<<<<< Updated upstream
                         <button class="application" type="submit"><a href=<%= app.getUrl()%> target="_blank" style="text-decoration: none; color: white;">Click here to visit</a></button>
                         <button class="favorite" type="submit"><ion-icon name="heart-outline" id="button_icon"></ion-icon><a href="setfavourite.jsp?url=<%=app.getUrl()%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
+=======
+                        <button class="application" type="submit"><a href=<%= app.getUrl()%> style="text-decoration: none; color: white;">Click here to visit</a></button>
+                        <%
+                        if(session.getAttribute("userObj") != null){
+                            Favourite fav = new Favourite();
+                            List <Favourite> favorites = fav.listFavourites(user);
+                            String url = "";
+                            for(Favourite f: favorites){ 
+                                if(app.getUrl().equals(f.getUrl())){
+                                    url = app.getUrl();
+                                }
+                            }
+                            if(url.equals("")){%>
+                            <button class="favorite" type="submit"><ion-icon name="heart-outline" id="button_icon"></ion-icon><a href="setfavourite.jsp?url=<%=app.getUrl()%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
+                            <%}else{%>
+                            <button class="favorite" type="submit"><ion-icon name="heart" id="button_icon"></ion-icon>Favourites</button>
+                            <%}
+                        }%>
+                        <% if(session.getAttribute("userObj") == null){%>
+                                <button class="favorite" type="submit"><ion-icon name="heart-outline" id="button_icon"></ion-icon><a href="setfavourite.jsp?url=<%=app.getUrl()%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
+                        <%}%>
+>>>>>>> Stashed changes
                     </div>
                 </div>
             <%if((totalapp%2)!=1 || sumapp==totalapp){%>
