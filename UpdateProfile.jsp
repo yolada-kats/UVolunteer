@@ -53,10 +53,7 @@
                 <textarea type="comments" class="form-control" id="comments" placeholder="Enter little Bio" name="comments">
                 </textarea>
               </div>
-              <div class="form-group">
-                <label for="image">Image: </label>
-                <input id="imageUpload" type="file" name="profile_photo" class="form-control" style="font-size:medium; font-family: 'Times New Roman', Times, serif;" placeholder="Photo" >
-              </div>
+              
 
             
             </div>

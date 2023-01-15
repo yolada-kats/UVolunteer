@@ -9,7 +9,7 @@
 <% String city = request.getParameter("city");%>
 <% String email = request.getParameter("email");%>
 <% String comments = request.getParameter("comments");%>
-<% String image = request.getParameter("profile_photo");%>
+
 
 
 <!DOCTYPE html>
@@ -69,7 +69,7 @@
         <% try {
 
             ProfileDAO PDAO = new ProfileDAO();
-            PDAO.updateInfo(user.getUsername(), name, surname, country, city, email, comments, image);
+            PDAO.updateInfo(user.getUsername(), name, surname, country, city, email, comments);
             Profile profile = PDAO.findProfile(user.getUsername());
             
         %>

@@ -3,23 +3,23 @@ package univolunteer;
 public class Profile {
 
     private String username;
-	private String name;
+    private String name;
     private String surname;
     private String email;
     private String comments;
     private String country;
     private String city;
-    private String image;
 
-    public Profile(String username, String name, String surname, String email, String comments, String country, String city, String image) {        
+    public Profile(String username, String name, String surname, String email, String comments, String country,
+            String city) {
         this.username = username;
         this.name = name;
-        this.surname = surname ;
+        this.surname = surname;
         this.email = email;
         this.comments = comments;
         this.country = country;
         this.city = city;
-        this.image = image;
+
     }
 
     public void setUsername(String username) {
@@ -31,16 +31,16 @@ public class Profile {
     }
 
     public void setName(String name) {
-        this.name = name;        
-    }  
+        this.name = name;
+    }
 
     public String getName() {
         return name;
     }
 
     public void setSurname(String surname) {
-        this.surname = surname;        
-    }  
+        this.surname = surname;
+    }
 
     public String getSurname() {
         return surname;
@@ -70,7 +70,6 @@ public class Profile {
         return country;
     }
 
-    
     public void setCity(String city) {
         this.city = city;
     }
@@ -79,11 +78,4 @@ public class Profile {
         return city;
     }
 
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getImage() {
-        return image;
-    }
 }
