@@ -79,14 +79,12 @@ public class ApplicationDAO {
             stmt.setString(1, keyword);
             stmt.setString(2, keyword);
 			ResultSet rs = stmt.executeQuery(); 
-            if (!rs.next()) {
-                throw new Exception("No Organizations found");
-            }
             while (rs.next()) {
-            Application foundApplications = new Application(rs.getString("url"), rs.getString("organization"),
-            rs.getString("event_date"), rs.getString("region"));
-            findApplications.add(foundApplications);
+                Application foundApplications = new Application(rs.getString("url"), rs.getString("organization"),
+                rs.getString("event_date"), rs.getString("region"));
+                findApplications.add(foundApplications);
             }
+
             rs.close();
             stmt.close();
             return findApplications;
