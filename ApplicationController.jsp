@@ -10,7 +10,7 @@
 		<style>
 			body {
     			position: absolute;
-   				background-image: url("images/background.png");
+   				background-image: url("images/color.png");
     			background-repeat: no-repeat;
     			background-attachment: fixed;
     			background-position: center;
