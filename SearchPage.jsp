@@ -68,11 +68,7 @@
                         <button class="info" type="button" disabled> <ion-icon name="calendar-outline"></ion-icon>  <%=app.getDate()%></button>
                     </div>
                     <div class="info-buttons">
-<<<<<<< Updated upstream
-                        <button class="application" type="submit"><a href=<%= app.getUrl()%> target="_blank" style="text-decoration: none; color: white;">Click here to visit</a></button>
-                        <button class="favorite" type="submit"><ion-icon name="heart-outline" id="button_icon"></ion-icon><a href="setfavourite.jsp?url=<%=app.getUrl()%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
-=======
-                        <button class="application" type="submit"><a href=<%= app.getUrl()%> style="text-decoration: none; color: white;">Click here to visit</a></button>
+                        <button class="application" type="submit"><a href=<%= app.getUrl()%> style="text-decoration: none; color: white;" target="_blank">Click here to visit</a></button>
                         <%
                         if(session.getAttribute("userObj") != null){
                             Favourite fav = new Favourite();
@@ -92,7 +88,6 @@
                         <% if(session.getAttribute("userObj") == null){%>
                                 <button class="favorite" type="submit"><ion-icon name="heart-outline" id="button_icon"></ion-icon><a href="setfavourite.jsp?url=<%=app.getUrl()%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
                         <%}%>
->>>>>>> Stashed changes
                     </div>
                 </div>
             <%if((totalapp%2)!=1 || sumapp==totalapp){%>

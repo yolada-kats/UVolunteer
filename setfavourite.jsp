@@ -74,7 +74,7 @@
                             <button class="info" type="button" disabled> <ion-icon name="calendar-outline"></ion-icon>  <%=app.getDate()%></button>
                         </div>
                         <div class="info-buttons">
-                            <button class="application" type="submit"><a href=<%= app.getUrl()%> style="text-decoration: none; color: white;">Click here to visit</a></button>
+                            <button class="application" type="submit"><a href=<%= app.getUrl()%> style="text-decoration: none; color: white;" target="_blank">Click here to visit</a></button>
                             <%
                             String url1 = "";
                             for(Favourite f: favorites){ 

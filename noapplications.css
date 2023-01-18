@@ -4,7 +4,7 @@
   }
   body {
     position: absolute;
-    background-image: url("images/background.png");
+    background-image: url("images/color.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -198,11 +198,16 @@
   .flex-container{
     display:flex;
     align-self:center;
+    margin-left: 150px;
+    margin-top: 30px;
     width: 110%;
     height: 100%;
     display: flex;
     flex-direction: row;
     column-gap: 3%;
+    border-radius: 5px;
+
+
   }
 .flex-box{
     display:flex;
@@ -230,8 +235,8 @@ h1 span{
     font-size: 25px;
 }
 .inside-box-icon{
-    width: 200px;
-    height: 150px;
+    width: 120px;
+    height: 100px;
 }
   
   .container {

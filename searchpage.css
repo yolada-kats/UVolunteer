@@ -4,7 +4,7 @@
 }
 body {
   position: absolute;
-  background-image: url("images/back1.png");
+  background-image: url("images/color.png");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
@@ -348,7 +348,7 @@ button.favorite:hover {
   flex-direction: column;
   align-items: center;
 }
-<<<<<<< Updated upstream
+
 .search-bar {
   position:absolute;
   top:0;
@@ -388,5 +388,4 @@ button.favorite:hover {
   background: rgb(145, 95, 3);
   cursor: pointer;
 }  
-=======
->>>>>>> Stashed changes
+

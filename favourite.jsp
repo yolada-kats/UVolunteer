@@ -57,7 +57,7 @@
                         <button class="info" type="button" disabled> <ion-icon name="calendar-outline"></ion-icon>  <%=f.getDate()%></button>
                     </div>
                     <div class="info-buttons">
-                        <button class="application" type="submit"><a href=<%= f.getUrl()%> style="text-decoration: none; color: white;">Click here to visit</a></button>
+                        <button class="application" type="submit"><a href=<%= f.getUrl()%> style="text-decoration: none; color: white;"  target="_blank">Click here to visit</a></button>
                         <button class="favorite" type="submit"><ion-icon name="heart" id="button_icon"></ion-icon><a href="removefavourite.jsp?url=<%=f.getUrl()%>" style="text-decoration: none; color: rgb(39, 23, 6);">Favourites</a></button>
                     </div>
                 </div>
