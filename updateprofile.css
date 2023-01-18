@@ -46,7 +46,7 @@ body {
 .container {
     position: absolute;
     background-color: rgba(255, 238, 214, 0.596);
-    top: 25vh;
+    top: 10vh;
     display: grid;
     align-items: center;
     justify-content: center;
