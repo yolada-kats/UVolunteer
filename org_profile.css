@@ -4,7 +4,7 @@
 }
 body {
     position: absolute;
-    background-image: url("images/background.png");
+    background-image: url("images/color.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -96,6 +96,9 @@ h1 span{
 }
 
 .container {
+    position: absolute;
+    top: 150px;
+    left: 450px;
     margin-top: 15%;
     width: fit-content;
     display: flex;
@@ -202,4 +205,8 @@ h1 span{
     margin: 5px 0;
     transform: scale(0.6);
     filter: invert(1);
+<<<<<<< Updated upstream
 }
+=======
+} 
+>>>>>>> Stashed changes
