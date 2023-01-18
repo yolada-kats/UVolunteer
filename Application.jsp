@@ -26,7 +26,7 @@
     <div class="container">
     
       <div class="row justify-content-center">
-        <div class="col-6 col-md-9">
+        <div class="col-6 col-md-12">
         
         <form method="POST" action="ApplicationController.jsp">
           <h2 class="text-color">Application Form</h2>

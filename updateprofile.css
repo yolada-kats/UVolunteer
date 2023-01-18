@@ -4,7 +4,7 @@
 }
 body {
     position: absolute;
-    background-image: url("images/background.png");
+    background-image: url("images/color.png");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
@@ -45,16 +45,17 @@ body {
 
 .container {
     position: absolute;
-    background-color:rgba(255, 238, 214, 0.596);
-    left: 500px;
-    top: 50px;
-    height: fit-content;
-    display: flex;
+    background-color: rgba(255, 238, 214, 0.596);
+    top: 25vh;
+    display: grid;
     align-items: center;
-    flex-direction: column;
+    justify-content: center;
     width: fit-content;
     border-radius: 10px;
+    justify-items: center;
+    left: 35vw;
 }
+
 
 .form-group{
     border-radius: 20px;
