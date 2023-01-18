@@ -17,14 +17,14 @@
     			background-size: cover;
 			}
 			.page-header {
-				color:rgb(243, 241, 239);
+				color:rgb(74, 44, 12);
 				text-align: center;
 
 			}
 .btn-light{
-    color:rgb(243, 241, 239);
+    color:rgb(74, 44, 12);
     background-color:rgb(74, 44, 12);;
-    border-color: antiquewhite;
+    border-color: rgb(245, 241, 235);
     width: 250px;
     height: 45px;
     margin-top: 20px;
