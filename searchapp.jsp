@@ -48,9 +48,10 @@
         ApplicationDAO search = new ApplicationDAO();
         List <Application> applications = search.findApplications(keyword);
         boolean ans = applications.isEmpty();
-        if(ans){%>
-            <jsp:forward page="noapplications.jsp"/>
-        <%}%>
+            if(ans){%>
+                <jsp:forward page="noapplications.jsp"/>
+            <%}
+        %>
         <div class="big-flex-box">
             <%
             int sumapp = 0;

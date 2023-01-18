@@ -5,7 +5,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-        <link rel="stylesheet" href="searchpage.css">
+        <link rel="stylesheet" href="noapplications.css">
     </head>
     <body>
 
@@ -33,22 +33,27 @@
                     <li><a href ="Application.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
             <%}
             }%></ul>
+        <form method="post" action="searchapp.jsp">
         <div class="container">
-            <form method="post" action="searchapp.jsp">
                 <div class="search-bar">
                     <input type="text" name="searchinput" placeholder="Search for programs...">
                     <button type="submit"><img src="images/search.png"></button>
                 </div>
-        </form>
-            <div class="flex-container">   
-                <div class="flex-box">
-                    <div class="title-and-icon">
-                        <img class="inside-box-icon" src="images/nosearch.png">
-                        <h2>No results</h2>
+                <div class="flex-container">   
+                    <div class="flex-box">
+                        <div class="title-and-icon">
+                            <br>
+                            <br>
+                            <img class="inside-box-icon" src="images/nosearch.png">
+                            <br>
+                            <br>
+                            <h2>No Results</h2>
+                            <br>
+                        </div>
                     </div>
                 </div>
-            </div>
         </div>
+        </form>
         <div type="div" class="bar">
             <h1>U<span class="color">ni</span>Volunteer </h1>
             <div class="buttons">
