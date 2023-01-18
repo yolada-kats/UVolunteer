@@ -6,8 +6,6 @@
 <% String keyword = request.getParameter("keyword");%>
 <% User user = (User)session.getAttribute("userObj");%>
 
-
-
 <!DOCTYPE html>
 <html>
    

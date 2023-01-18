@@ -54,9 +54,20 @@
                         <text> Contact: <%= profile.getEmail()%> </text>
                     </div>
                 </div>
-                <text class="comments"><u>Comments:</u> 
+                <text class="comments"><u>Comments:</u>
+                    <%  String comments = profile.getComments();
+                        int length = comments.length();
+                        int reps = length/120;
+                        for (int i = 0; i < reps; i++){ 
+                    %>
+                        <p>
+                            <%= comments.substring(i * 120, (i * 120) + 120)%>
+                        </p>
+                    <%
+                        }
+                    %>
                     <p>
-                        <%= profile.getComments()%>
+                        <%= comments.substring(reps * 120)%>
                     </p>
                 </text>
             </div>

@@ -72,11 +72,11 @@
         </form>
         
        
-        <ul class="social" >    
+        <!-- <ul class="social" >    
             <li><a href="#"><img src="images/facebook .png"></a></li>
             <li><a href="#"><img src="images/instagram.png"></a></li>
             <li><a href="#"><img src="images/twitter.png"></a></li>
-        </ul>
+        </ul> -->
         
         <div type="div" class="bar">
             <h1>U<span class="color">ni</span>Volunteer </h1>

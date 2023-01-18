@@ -1,4 +1,4 @@
-*{
+/* *{
     padding: 0;
     margin: 0;  
 }
@@ -96,9 +96,11 @@ h1 span{
 }
 
 .container {
-    position: absolute;
-    top: 150px;
-    left: 450px;
+    margin-top: 15%;
+    width: fit-content;
+    display: flex;
+    height: 1000px;
+    flex-direction: column;
 }
 
 .profiles {
@@ -135,7 +137,7 @@ h1 span{
     width: fit-content;
     border: none;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 40%;
+    font-size: 100%;
     font-weight: 500;
     cursor: pointer;
     padding-bottom: 5px;
@@ -200,4 +202,4 @@ h1 span{
     margin: 5px 0;
     transform: scale(0.6);
     filter: invert(1);
-}
+} */
