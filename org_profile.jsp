@@ -33,15 +33,18 @@
                 <li><a href ="Application.jsp" style="text-decoration: none"><button type="button" class="button"></ion-icon><span class="button_icon"><ion-icon name="cloud-upload-outline"></span><span class="button_text">Upload</span></button></a></li>
             <%}%>
         </ul>
-
-        <form action="org_profile_results.jsp" method="POST">
+        
+        
             <div class="container">
-                <div class="search-bar">
-                    <input type="text" name="keyword" id="search" placeholder="Search for students based on country or city...">
-                    <button type="submit"><img src="images/search.png"></button>
-                </div>
+                <form action="org_profile_results.jsp" method="POST">
+                    <div class="search-bar">
+                        <input type="text" name="keyword" id="search" placeholder="Search for students based on country or city...">
+                        <button type="submit"><img src="images/search.png"></button>
+                    </div>
+                </form>
+                
                 <% if(request.getAttribute("error_message") != null) {%> 
-                    <div style="color:whitesmoke; text-align: center; font-size: 140%; background: rgb(99, 55, 5); border-radius: 10px; padding: 10px;">
+                    <div class="error_message">
                         <%= request.getAttribute("error_message")%>
                     </div>
                 <%} else {
@@ -69,14 +72,36 @@
                     }      
                 }%>      
             </div>
-        </form>
         
+            <div type="div" class="bar">
+                <h1>U<span class="color">ni</span>Volunteer </h1>
+                <div class="buttons">
+                    <% if(session.getAttribute("userObj") == null){%>
+                        <a href ="login.jsp" style="text-decoration: none">
+                        <button class="b1">
+                            Log in
+                        </button>
+                        </a>
+                        <a href ="signin.jsp" style="text-decoration: none">
+                        <button class="b2">
+                            Sing in
+                        </button> 
+                        </a>
+                     <%}else{%>
+                        <a href ="logout.jsp" style="text-decoration: none">
+                            <button class="b1">
+                                Log out
+                            </button>
+                        </a>
+                    <%}%>
+                 </div>
+            </div>
        
-        <!-- <ul class="social" >    
+        <ul class="social" >    
             <li><a href="#"><img src="images/facebook .png"></a></li>
             <li><a href="#"><img src="images/instagram.png"></a></li>
             <li><a href="#"><img src="images/twitter.png"></a></li>
-        </ul> -->
+        </ul>
         
         <div type="div" class="bar">
             <h1>U<span class="color">ni</span>Volunteer </h1>
