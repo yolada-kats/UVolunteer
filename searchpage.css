@@ -12,7 +12,7 @@ body {
 }
 
 .menu {
-  position: fixed;
+  position: absolute;
   display: flex;
   flex-direction: column;
   top: 115px;
