@@ -62,8 +62,8 @@
             </div>
             <div class="buttons">
               <div class="form-group">
-                <button type="submit" class="btn_update"> Update </button></a>
-                <button type="submit" class="btn_cancel" name="cancel"> Cancel </button></a>
+                <button type="submit" class="btn_update"> Update </button>
+                <button type="submit" class="btn_cancel" name="cancel"> Cancel </button>
               </div>
             </div>
           </form>

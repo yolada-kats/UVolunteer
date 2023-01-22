@@ -2,16 +2,6 @@
 <%@ page import="univolunteer.*"%>
 <%@ page import="java.lang.Math.*"%>
 
-<% User user = (User)session.getAttribute("userObj");%>
-<% String name = request.getParameter("name");%>
-<% String surname = request.getParameter("surname");%>
-<% String country = request.getParameter("country");%>
-<% String city = request.getParameter("city");%>
-<% String email = request.getParameter("email");%>
-<% String comments = request.getParameter("comments");%>
-
-
-
 <!DOCTYPE html>
 <html>  
     <head>
