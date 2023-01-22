@@ -205,11 +205,55 @@ h1 span{
     filter: invert(1);
 }
 
-.error_message {
+.message {
     color:whitesmoke;
     text-align: center;
-    font-size: 140%;
+    font-size: 100%;
     background: rgb(99, 55, 5);
-    border-radius: 10px;
-    padding: 10px;
+    border-radius: 5px;
+    margin-top: 75px;
 }    
+
+
+.bar .buttons {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    right: 10px;
+}
+  
+.bar .buttons .b1, .b2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(39, 23, 6);
+    border: none;
+    border-radius: 5px;
+    margin-left: 10px;
+    width: 100px;
+    height: 40px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+}
+  
+.bar .buttons .b2 {
+    background-color: rgb(39, 23, 6);
+    color: white;
+}
+  
+.bar .buttons .b1:active,
+.bar .buttons .b2:active {
+    color: white;
+               
+}
+  
+.bar .buttons .b1:hover,
+.bar .buttons .b2:hover {
+    background-color: rgb(57, 34, 9);
+    color: white;
+}
+  

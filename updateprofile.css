@@ -23,8 +23,8 @@ body {
 }
 
 .btn_update {
-    color: rgb(39, 23, 6);
-    background-color: rgb(246, 220, 187);    
+    color:rgb(243, 241, 239);
+    background-color:rgb(74, 44, 12);;
     border-color: antiquewhite;
     width: 200px;
     height: 40px;
@@ -38,8 +38,8 @@ body {
 }
 
 
-.btn_update:hover{
-    background-color: rgb(95, 56, 15);
+.btn-light:hover{
+    background-color: rgb(114, 66, 15);
     color: white;
 }
 
@@ -70,28 +70,10 @@ body {
     color: rgb(10, 7, 5);
 }
 
-.buttons {
+.button {
     display: inline-block;
     align-items: center;
     justify-content: center;
     padding-bottom: 5px;
 }
 
-.btn_cancel {
-    background-color: rgb(39, 23, 6);
-    color: white;
-    border-color: antiquewhite;
-    width: 200px;
-    height: 40px;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    cursor: pointer;
-    border-radius: 10px;
-    font-size: 120%;
-    font-weight: 500;
-}
-
-.btn_cancel:hover{
-    background-color: rgb(95, 56, 15);
-}

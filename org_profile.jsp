@@ -96,16 +96,36 @@
                     <%}%>
                  </div>
             </div>
-       
+        <div type="div" class="bar">
+            <h1>U<span class="color">ni</span>Volunteer </h1>
+            <div class="buttons">
+                <% if(session.getAttribute("userObj") == null){%>
+                    <a href ="login.jsp" style="text-decoration: none">
+                    <button class="b1">
+                        Log in
+                    </button>
+                    </a>
+                    <a href ="signin.jsp" style="text-decoration: none">
+                    <button class="b2">
+                        Sing in
+                    </button> 
+                    </a>
+                 <%}else{%>
+                    <a href ="logout.jsp" style="text-decoration: none">
+                        <button class="b1">
+                            Log out
+                        </button>
+                    </a>
+                <%}%>
+            </div>
+        </div>
         <ul class="social" >    
             <li><a href="#"><img src="images/facebook .png"></a></li>
             <li><a href="#"><img src="images/instagram.png"></a></li>
             <li><a href="#"><img src="images/twitter.png"></a></li>
         </ul>
         
-        <div type="div" class="bar">
-            <h1>U<span class="color">ni</span>Volunteer </h1>
-        </div>
+        
 
 
     </body>
